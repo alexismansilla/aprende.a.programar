@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Textos | Aprende a Programar con Ruby</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="rubysur">
+        <meta name="description" content="Cuando programas una computadora, necesitas &quot;hablar&quot; en la forma que tu
+computadora entienda: un lenguaje de programación. Existen diferentes
+lenguajes y muchos de ellos son excelentes. En esta guía voy a
+usar mi lenguaje de programación favorito: _Ruby_.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../capitulos/variables.html" />
+        
+        
+        <link rel="prev" href="../capitulos/numeros.html" />
+        
+
+        <meta property="og:title" content="Textos | Aprende a Programar con Ruby">
+        <meta property="og:site_name" content="Aprende a Programar con Ruby">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/rubysur">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="2" data-basepath=".." data-revision="1397760143877">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/rubysur/aprende.a.programar" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/rubysur/aprende.a.programar/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/rubysur/aprende.a.programar/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="../" >Aprende a Programar con Ruby</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="http://rubysur.org/" target="blank">RubySur</a>
+        </li>
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/issues" target="blank">Preguntas y Errores</a>
+        </li>
+        <li>
+            <a href="https://github.com/rubysur/aprende.a.programar/edit/master/capitulos/textos.md" target="blank">Edita y Contribuye!</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i>Introducción</a>
+        </li>
+        
+            <li  data-level="1" data-path="capitulos/numeros.html">
+                
+                <a href="../capitulos/numeros.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Números
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="capitulos/textos.html">
+                
+                <a href="../capitulos/textos.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Textos
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="capitulos/variables.html">
+                
+                <a href="../capitulos/variables.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Variables
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="capitulos/conversiones.html">
+                
+                <a href="../capitulos/conversiones.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Conversiones
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="capitulos/metodos.html">
+                
+                <a href="../capitulos/metodos.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Métodos
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="capitulos/condicionales.html">
+                
+                <a href="../capitulos/condicionales.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Condicionales
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="capitulos/matrices.html">
+                
+                <a href="../capitulos/matrices.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Matrices e Iteraciones
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="capitulos/metodos_propios.html">
+                
+                <a href="../capitulos/metodos_propios.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Métodos Propios
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="capitulos/clases.html">
+                
+                <a href="../capitulos/clases.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Clases
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="capitulos/bloques.html">
+                
+                <a href="../capitulos/bloques.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Bloques
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="11" data-path="capitulos/fin.html">
+                
+                <a href="../capitulos/fin.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Fin
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="12" data-path="capitulos/acerca.html">
+                
+                <a href="../capitulos/acerca.html">
+                    <i class="fa fa-check"></i> <b>12.</b> Acerca de
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 41.666666666666664%;min-width: 33.333333333333336%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../capitulos/numeros.html" title="Números" class="chapter done new-chapter" data-progress="1" style="left: 8.333333333333334%;"></a>
+    
+        <a href="../capitulos/bloques.html" title="Bloques" class="chapter done " data-progress="10" style="left: 16.666666666666668%;"></a>
+    
+        <a href="../capitulos/fin.html" title="Fin" class="chapter done " data-progress="11" style="left: 25%;"></a>
+    
+        <a href="../capitulos/acerca.html" title="Acerca de" class="chapter done " data-progress="12" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../capitulos/textos.html" title="Textos" class="chapter done new-chapter" data-progress="2" style="left: 41.666666666666664%;"></a>
+    
+        <a href="../capitulos/variables.html" title="Variables" class="chapter  new-chapter" data-progress="3" style="left: 50%;"></a>
+    
+        <a href="../capitulos/conversiones.html" title="Conversiones" class="chapter  new-chapter" data-progress="4" style="left: 58.333333333333336%;"></a>
+    
+        <a href="../capitulos/metodos.html" title="Métodos" class="chapter  new-chapter" data-progress="5" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../capitulos/condicionales.html" title="Condicionales" class="chapter  new-chapter" data-progress="6" style="left: 75%;"></a>
+    
+        <a href="../capitulos/matrices.html" title="Matrices e Iteraciones" class="chapter  new-chapter" data-progress="7" style="left: 83.33333333333333%;"></a>
+    
+        <a href="../capitulos/metodos_propios.html" title="Métodos Propios" class="chapter  new-chapter" data-progress="8" style="left: 91.66666666666667%;"></a>
+    
+        <a href="../capitulos/clases.html" title="Clases" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_12">
+                    
+                        <h1 id="textos">Textos</h1>
+<p>Así que hemos aprendido todo acerca de
+<a href="/capitulos/01-numeros.markdown">números</a>,
+¿pero qué acerca de letras?  ¿palabras?  ¿textos?</p>
+<p>Nos referimos a grupos de letras en un programa como <dfn>textos</dfn>.  (Tú puedes
+pensar en letras impresas siendo ensartadas en un cartel.)
+Aquí hay algunos textos:</p>
+<pre><code><span class="hljs-string">'Hola.'</span>
+<span class="hljs-string">'Ruby la rompe.'</span>
+<span class="hljs-string">'5 es mi número favorito... ¿Cuál es el tuyo?'</span>
+<span class="hljs-string">'Snoopy dice #%^?&amp;*@! cuando le aplastan el dedo del pie.'</span>
+<span class="hljs-string">'     '</span>
+<span class="hljs-string">''</span>
+</code></pre><p>Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos,
+y espacios dentro... más que solo palabras. Ese último texto
+no tiene nada y podemos llamarlo un texto <dfn>vacío</dfn>.</p>
+<p>Hemos estado usando <code>puts</code> para imprimir números, intentémoslo con textos:</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'Hola, mundo!'</span>
+puts <span class="hljs-string">''</span>
+puts <span class="hljs-string">'Adiós.'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>Hola Mundo
+
+Adiós
+</code></pre><p>Eso funcionó bien. Ahora inténtalo con algún texto tuyo.</p>
+<h2 id="aritm-tica-de-textos">Aritmética de textos</h2>
+<p>Igual que hacer hacer aritmética con números, ¡tú puedes también hacer
+aritmética con textos! Bueno, algo así... puedes sumar textos, digamos.
+Intentemos sumar dos textos y ver que hace
+<code>puts</code> con eso.</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'Me gusta'</span> + <span class="hljs-string">'el pastel de manzana.'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code><span class="hljs-keyword">Me</span> gustael pastel de manzana
+</code></pre><p>Whoops! Me olvidé de poner un espacio entre <code>&#39;Me gusta&#39;</code> y <code>&#39;el pastel de manzana.&#39;</code>.
+Los espacios no importan generalmente salvo si lo hacen dentro de los textos.
+(Es verdad lo que dicen: las computadoras no hacen lo que tú <em>quieres</em>
+que hagan, solo lo que tú <em>le dices</em>  que hagan) Intentémoslo nuevamente:</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'Me gusta '</span> + <span class="hljs-string">'el pastel de manzana.'</span>
+puts <span class="hljs-string">'Me gusta'</span> + <span class="hljs-string">' el pastel de manzana.'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code><span class="hljs-keyword">Me</span> gusta el pastel de manzana
+<span class="hljs-keyword">Me</span> gusta el pastel de manzana
+</code></pre><p>(Como puedes ver, no importó a que texto le agregué el espacio)</p>
+<p>Así que puedes sumar textos, ¡pero también puedes multiplicarlas!
+(Por un número ...) Observa esto:</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'parpadeo '</span> * <span class="hljs-number">4</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>batea tus párpados
+</code></pre><p>(Solo bromeaba, en realidad muestra esto):</p>
+<pre><code>parpadeo parpadeo parpadeo parpadeo
+</code></pre><p>Si lo piensas, tiene todo el sentido. Después de todo,
+<code>7*3</code> realmente solo significa <code>7+7+7</code>, así que <code>&#39;moo&#39;*3</code> solo
+significa <code>&#39;moo&#39;+&#39;moo&#39;+&#39;moo&#39;</code>.</p>
+<h2 id="-12-vs-12-"><code>12</code> vs <code>&#39;12&#39;</code></h2>
+<p>Antes de ir más allá, debemos asegurarnos de entender la
+diferencia entre <em>números</em> y <em>dígitos</em>.
+<code>12</code> es un número, pero <code>&#39;12&#39;</code> es un texto de dos dígitos.</p>
+<p>Juguemos con esto un poco:</p>
+<p><em>Código:</em></p>
+<pre><code>puts  <span class="hljs-number">12</span>  +  <span class="hljs-number">12</span>
+puts <span class="hljs-string">'12'</span> + <span class="hljs-string">'12'</span>
+puts <span class="hljs-string">'12  +  12'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>24
+1212
+12  +  12
+</code></pre><p>Y qué sucede con esto?:</p>
+<p><em>Código:</em></p>
+<pre><code>puts  <span class="hljs-number">2</span>  *  <span class="hljs-number">5</span>
+puts <span class="hljs-string">'2'</span> *  <span class="hljs-number">5</span>
+puts <span class="hljs-string">'2  *  5'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>10
+22222
+2  *  5
+</code></pre><p>Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
+cuidado en cómo mezclas tus textos y tus números podrías encontrarte con...</p>
+<h2 id="problemas">Problemas</h2>
+<p>En este punto podrías haber probado algunas cosas que
+<em>no funcionaron</em>. Si no lo has hecho, aquí hay algunas:</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'12'</span> + <span class="hljs-number">12</span>
+puts <span class="hljs-string">'2'</span> * <span class="hljs-string">'5'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>can<span class="hljs-attribute">'t</span> convert Fixnum into <span class="hljs-typename">String</span> (TypeError)
+</code></pre><p>Hmmm... un mensaje de error.  El problema es que en realidad
+no puedes sumar un número a un texto, o multiplicar
+un texto por otro texto. No tiene más sentido que esto:</p>
+<pre><code>puts <span class="hljs-string">'Betty'</span> + <span class="hljs-number">12</span>
+puts <span class="hljs-string">'Fred'</span> * <span class="hljs-string">'John'</span>
+</code></pre><p>Algo más para tener cuidado: Puedes escribir <code>&#39;pig&#39;*5</code> en un programa,
+dado que sólo significa <code>5</code> veces el texto <code>&#39;pig&#39;</code> todo
+sumado. De cualquier modo,
+tú <em>no puedes</em> escribir <code>5*&#39;pig&#39;</code>, ya que eso significa <code>&#39;pig&#39;</code>
+veces el número <code>5</code>, lo cual es simplemente tonto.</p>
+<p>Finalmente, y si quisieras que tu programa imprimiera
+<code>¡Mi nombre es O&#39;hara!</code>?  Podrías intentar:</p>
+<pre><code><span class="hljs-function_or_atom">puts</span> <span class="hljs-string">'¡Mi nombre es O'</span><span class="hljs-function_or_atom">hara</span><span class="hljs-exclamation_mark">!</span><span class="hljs-string">'</span>
+</code></pre><p>Bueno, <em>eso</em> no funcionará; No intentaré ni ejecutarlo.
+La computadora pensó que habíamos terminado con el texto.
+(Esta es la razón de porque es lindo tener un editor de
+texto que haga <dfn>coloreo sintáctico</dfn> por ti)
+¿Entonces, cómo permitimos que la computadora sepa que
+queremos permanecer en el texto? Tenemos que <dfn>escapar</dfn>
+el apóstrofe, de esta manera:</p>
+<pre><code>puts <span class="hljs-string">'¡Mi nombre es O\'</span>hara!<span class="hljs-string">'</span>
+</code></pre><p>La barra invertida es el carácter de escape. En otras palabras,
+si tú tienes una barra invertida y otro carácter, ellos a veces son
+convertidos a otro carácter. Las únicas cosas que una barra invertida
+escapa son los apóstrofes y las propias barras invertidas. (Si lo
+piensas un poco, los caracteres escapados siempre se escapan a sí mismo)
+Unos pocos ejemplos vendrían muy bien, me parece:</p>
+<p><em>Código:</em></p>
+<pre><code>puts <span class="hljs-string">'¡Mi nombre es O\'</span>hara!<span class="hljs-string">'
+puts '</span>barra invertida al <span class="hljs-keyword">final</span> del texto:  \\<span class="hljs-string">'
+puts '</span>arriba\\abajo<span class="hljs-string">'
+puts '</span>arriba\abajo<span class="hljs-string">'</span>
+</code></pre><p><em>Resultado:</em></p>
+<pre><code>¡Mi nombre es O'hara!
+barra invertida al final del texto:  <span class="hljs-command">\
+</span>arriba<span class="hljs-command">\abajo</span>
+arriba<span class="hljs-command">\abajo</span>
+</code></pre><p>Dado que la barra invertida <em>no</em> escapa un `&#39;d&#39;,
+pero <em>si</em> si se escapa a si misma, esos dos últimos caracteres
+son idénticos. No parecen lo mismo en el código, pero en tu computadora
+son realmente los mismos.</p>
+<p>Si tienes alguna pregunta, solo <a href="/capitulos/03-variables.html">¡sigue leyendo!</a>
+No podría contestar cada pregunta en <em>esta</em> página, después de todo.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../capitulos/numeros.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../capitulos/variables.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>
