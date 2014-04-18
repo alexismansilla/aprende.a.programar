@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="2" data-basepath=".." data-revision="1397788007475">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="2" data-basepath=".." data-revision="1397788508211">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -267,8 +267,10 @@ Adiós.
 <p>Al igual que hacer aritmética con números, ¡tú también puedes hacer
 aritmética con textos! Bueno, algo así ... digamos que puedes suma
 textos. Intentemos sumar dos textos y ver que hace <code>puts</code> con eso.</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">"Me gusta"</span> + <span class="hljs-string">"el pastel de manzana."</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">Me gustael pastel de manzana.
 </code></pre>
 <p>Whoops! Me olvidé de poner un espacio entre <code>&quot;Me gusta&quot;</code> y
@@ -276,17 +278,21 @@ textos. Intentemos sumar dos textos y ver que hace <code>puts</code> con eso.</p
 se escriben dentro de los textos (es verdad lo que dicen: las computadoras
 no hacen lo que tú <em>quieres</em> que hagan, sólo lo que tú <em>les dices</em> que
 hagan). Intentémoslo nuevamente:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">"Me gusta "</span> + <span class="hljs-string">"el pastel de manzana."</span>
 puts <span class="hljs-string">"Me gusta"</span> + <span class="hljs-string">" el pastel de manzana."</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">Me gusta el pastel de manzana.
 Me gusta el pastel de manzana.
 </code></pre>
 <p>Como puedes ver, no importó a que texto le agregué el espacio.</p>
 <p>Así que puedes sumar textos, pero ... ¡también puedes multiplicarlos! (por
 un número ...). Observa esto:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">"parpadeo "</span> * <span class="hljs-number">4</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">batea tus párpados
 </code></pre>
 <p>Solo bromeaba, en realidad muestra esto:</p>
@@ -300,19 +306,23 @@ sólo significa <code>7 + 7 + 7</code>, así que <code>&quot;moo&quot; * 3</code
 números y dígitos. <code>12</code> es un número, pero <code>&quot;12&quot;</code> es un texto de dos
 dígitos.</p>
 <p>Juguemos con esto un poco:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts  <span class="hljs-number">12</span>  +  <span class="hljs-number">12</span>
 puts <span class="hljs-string">"12"</span> + <span class="hljs-string">"12"</span>
 puts <span class="hljs-string">"12  +  12"</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">24
 1212
 12  +  12
 </code></pre>
 <p>Y qué sucede con esto?:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts  <span class="hljs-number">2</span>  *  <span class="hljs-number">5</span>
 puts <span class="hljs-string">"2"</span> *  <span class="hljs-number">5</span>
 puts <span class="hljs-string">"2  *  5"</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">10
 22222
 2  *  5
@@ -322,9 +332,11 @@ cuidado en cómo mezclas textos y números podrías encontrarte con ...</p>
 <h2 id="problemas">Problemas</h2>
 <p>En este punto podrías haber probado algunas cosas que no funcionaron. Si
 no lo has hecho, aquí hay algunas:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">"12"</span> + <span class="hljs-number">12</span>
 puts <span class="hljs-string">"2"</span> * <span class="hljs-string">"5"</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">can&#39;t convert Fixnum into String (TypeError)
 </code></pre>
 <p>Hmmm... un mensaje de error. El problema es que en realidad no puedes sumar
@@ -350,9 +362,11 @@ puedes usar comillas simples (<code>&#39;</code>) para escribir texto en Ruby.</
 <p>Entonces, podrías combinar comillas simples (<code>&#39;</code>) o dobles (<code>&quot;</code>) según
 lo requieras. Es más fácil de entender, si miramos los siguientes
 ejemplos:</p>
+<p><strong>Código:</strong></p>
 <pre><code class="lang-ruby">puts <span class="hljs-string">"Mi nombre es Jo'C."</span>
 puts <span class="hljs-string">'¡Mi sobrenombre es "Pepe"!'</span>
 </code></pre>
+<p><strong>Resultado:</strong></p>
 <pre><code class="lang-html">Mi nombre es Jo&#39;C
 ¡Mi sobrenombre es &quot;Pepe&quot;!
 </code></pre>
