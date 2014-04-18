@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="1" data-basepath=".." data-revision="1397764787849">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="1" data-basepath=".." data-revision="1397782757726">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -241,105 +241,112 @@ usar mi lenguaje de programación favorito: _Ruby_.">
 Abre tu editor de texto favorito y escribe lo siguiente:</p>
 <pre><code class="lang-ruby">puts <span class="hljs-number">1</span>+<span class="hljs-number">2</span>
 </code></pre>
-<p>Guarda tu programa (sí, ¡eso es un programa!) como <code>calc.rb</code>
-(el <strong>.rb</strong> es lo que usualmente ponemos al final de
-los programas escritos en Ruby). Ahora ejecuta tu programa escribiendo
-<code>ruby calc.rb</code> en la línea de comandos. Deberías obtener un <code>3</code>
-en tu pantalla. ¿Lo ves?, programar no es tan difícil, ¿cierto?</p>
+<p>Guarda tu programa (sí, ¡eso es un programa!) como <code>calc.rb</code> (el <code>.rb</code>
+es lo que usualmente ponemos al final de los programas escritos en Ruby).
+Ahora ejecuta tu programa escribiendo <code>ruby calc.rb</code> en la línea de
+comandos. Deberías obtener un <code>3</code> en tu pantalla. ¿Lo ves?, programar no
+es tan difícil, ¿cierto?</p>
 <h2 id="introducci-n-a-puts-">Introducción a <code>puts</code></h2>
-<p>¿Cómo es que funciona ese programa? Seguramente puedes adivinar qué es lo que
-<code>1+2</code> hace; nuestro programa es básicamente lo mismo que:</p>
-<pre><code><span class="hljs-built_in">puts</span> <span class="hljs-number">3</span>
-</code></pre><p><code>puts</code> simplemente escribe en la pantalla lo que sea que escribamos a continuación.</p>
+<p>¿Cómo es que funciona ese programa? Seguramente puedes adivinar qué es lo
+que <code>1 + 2</code> hace; nuestro programa es básicamente lo mismo que:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-number">3</span>
+</code></pre>
+<p><code>puts</code> simplemente escribe en la pantalla lo que sea que escribamos a
+continuación.</p>
 <h2 id="enteros-y-flotantes">Enteros y flotantes</h2>
 <p>En la mayoría de los lenguajes de programación (y Ruby no es la excepción)
-los números sin decimales son llamados <em>enteros</em> (traducción de <em>integers</em> en
-su versión en Inglés), y los números con punto decimal normalmente son llamados
-<em>números de punto flotante</em> (o llamados sólo <em>flotantes</em> de ahora en adelante ya
-que proviene de su original en inglés <em>floats</em>).</p>
+los números sin decimales son llamados <em>enteros</em> (traducción de <em>integers</em>
+en su versión en Inglés), y los números con punto decimal normalmente son
+llamados <em>números de punto flotante</em> (o llamados sólo <em>flotantes</em> de ahora
+en adelante ya que proviene de su original en inglés <em>floats</em>).</p>
 <p>Aquí hay algunos enteros:</p>
-<pre><code>5
--<span class="ruby"><span class="hljs-number">205</span>
-</span>9999999999999999999999999
+<pre><code class="lang-html">5
+-205
+9999999999999999999999999
 0
-</code></pre><p>Y aquí hay algunos flotantes:</p>
-<pre><code>54.321
+</code></pre>
+<p>Y aquí hay algunos flotantes:</p>
+<pre><code class="lang-html">54.321
 0.001
--<span class="ruby"><span class="hljs-number">205.3884</span>
-</span>0.0
-</code></pre><p>En la práctica, la mayoría de los programas no usan flotantes, sólo enteros.
-(Después de todo, nadie quiere leer 7.4 emails, o navegar 1.8 páginas,
-o escuchar 5.24 de sus canciones favoritas...) Los flotantes se usan más con
-propósitos académicos (como por ejemplo experimentos científicos) y para
-gráficos en 3D. Incluso la mayoría de los programas financieros usan enteros,
-¡simplemente llevan un registro de los centavos!</p>
+-205.3884
+0.0
+</code></pre>
+<p>En la práctica, la mayoría de los programas no usan flotantes, sólo
+enteros (después de todo, nadie quiere leer 7.4 emails, o navegar 1.8
+páginas, o escuchar 5.24 de sus canciones favoritas...) Los flotantes
+se usan más con propósitos académicos (como por ejemplo experimentos
+científicos) y para gráficos en 3D. Incluso la mayoría de los programas
+financieros usan enteros, ¡simplemente llevan un registro de los centavos!</p>
 <h2 id="aritm-tica-simple">Aritmética simple</h2>
-<p>Hasta ahora, tenemos todo lo que necesita una calculadora simple.
-(Las calculadoras siempre usan flotantes, así que si
-quieres que tu computadora actúe como una calculadora, también deberías
-usar flotantes). Para suma y resta, usamos <code>+</code> y <code>-</code>, como ya lo vimos.
-Para la multiplicación, usamos <code>*</code>, y para la división usamos
-<code>/</code>. La mayoría de los teclados tienen estas teclas en el
-teclado numérico a la derecha. Intentemos expandir un poco
+<p>Hasta ahora, tenemos todo lo que necesita una calculadora simple (las
+calculadoras siempre usan flotantes, así que si quieres que tu computadora
+actúe como una calculadora, también deberías usar flotantes). Para suma y
+resta, usamos <code>+</code> y <code>-</code>, como ya lo vimos. Para la multiplicación, usamos
+<code>*</code>, y para la división usamos <code>/</code>. La mayoría de los teclados tienen estas
+teclas en el teclado numérico a la derecha. Intentemos expandir un poco
 nuestro programa <code>calc.rb</code>. Escribe lo siguiente y ejecútalo:</p>
-<pre><code><span class="hljs-built_in">puts</span> <span class="hljs-number">1.0</span> + <span class="hljs-number">2.0</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">2.0</span> * <span class="hljs-number">3.0</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">5.0</span> - <span class="hljs-number">8.0</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">9.0</span> / <span class="hljs-number">2.0</span>
-</code></pre><p>Esto es lo que retorna el programa:</p>
-<pre><code>3.0
+<pre><code class="lang-ruby">puts <span class="hljs-number">1.0</span> + <span class="hljs-number">2.0</span>
+puts <span class="hljs-number">2.0</span> * <span class="hljs-number">3.0</span>
+puts <span class="hljs-number">5.0</span> - <span class="hljs-number">8.0</span>
+puts <span class="hljs-number">9.0</span> / <span class="hljs-number">2.0</span>
+</code></pre>
+<p>Esto es lo que retorna el programa:</p>
+<pre><code class="lang-html">3.0
 6.0
--<span class="ruby"><span class="hljs-number">3.0</span>
-</span>4.5
-</code></pre><p>(Los espacios en el programa no son importantes; simplemente
-hacen que el código sea más fácil de leer). Bueno, eso no
-fue muy sorprendente. Ahora probemos con enteros:</p>
-<pre><code><span class="hljs-built_in">puts</span> <span class="hljs-number">1</span>+<span class="hljs-number">2</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">2</span>*<span class="hljs-number">3</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">5</span>-<span class="hljs-number">8</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">9</span>/<span class="hljs-number">2</span>
-</code></pre><p>Básicamente lo mismo, ¿no?</p>
-<pre><code>3
+-3.0
+4.5
+</code></pre>
+<p>Los espacios en el programa no son importantes; simplemente hacen que el
+código sea más fácil de leer. Bueno, eso no fue muy sorprendente. Ahora
+probemos con enteros:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-number">1</span> + <span class="hljs-number">2</span>
+puts <span class="hljs-number">2</span> * <span class="hljs-number">3</span>
+puts <span class="hljs-number">5</span> - <span class="hljs-number">8</span>
+puts <span class="hljs-number">9</span> / <span class="hljs-number">2</span>
+</code></pre>
+<p>Básicamente lo mismo, ¿no?</p>
+<pre><code class="lang-html">3
 6
--<span class="ruby"><span class="hljs-number">3</span>
-</span>4
-</code></pre><p>Uh... ¡excepto por el último!
-Pero cuando se hace aritmética con enteros, se obtienen enteros.
-Cuando tu computadora no puede obtener la respuesta &quot;correcta&quot;,
-siempre redondea hacia abajo (Por supuesto, <code>4</code> <em>es</em>
-la respuesta correcta en aritmética con enteros para <code>9/2</code>;
-simplemente tal vez no sea el resultado que esperaba).</p>
+-3
+4
+</code></pre>
+<p>Uh... ¡excepto por el último! Pero cuando se hace aritmética con enteros,
+se obtienen enteros. Cuando tu computadora no puede obtener la respuesta
+&quot;correcta&quot;, siempre redondea hacia abajo (Por supuesto, <code>4</code> <em>es</em> la
+respuesta correcta en aritmética con enteros para <code>9 / 2</code>; simplemente
+tal vez no sea el resultado que esperaba).</p>
 <p>Tal vez te preguntes para qué es útil la división entera. Bueno, digamos
 que va al cine, pero sólo tiene $9. Aquí en Portland, puede ver una
 película en el Bagdad por $2. ¿Cuántas películas puede ver allí?
-<code>9/2</code>... <code>4</code> películas. 4.5 definitivamente <em>no</em>
-es la respuesta correcta ya que no le dejarán ver la mitad de
-una película o dejar que una mitad suya vea la película entera...
-algunas cosas simplemente no son divisibles.</p>
+<code>9 / 2</code>... <code>4</code> películas. 4.5 definitivamente <em>no</em> es la respuesta
+correcta ya que no le dejarán ver la mitad de una película o dejar que una
+mitad suya vea la película entera... algunas cosas simplemente no son
+divisibles.</p>
 <p>¡Así que ahora experimenta con algunos programas por tu cuenta!
 Si quiere escribir expresiones más complejas, puede usar paréntesis.
 Por ejemplo:</p>
-<p><em>Código:</em></p>
-<pre><code><span class="hljs-built_in">puts</span> <span class="hljs-number">5</span> * (<span class="hljs-number">12</span>-<span class="hljs-number">8</span>) + -<span class="hljs-number">15</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">98</span> + (<span class="hljs-number">59872</span> / (<span class="hljs-number">13</span>*<span class="hljs-number">8</span>)) * -<span class="hljs-number">52</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>5
-<span class="hljs-deletion">-29802</span>
-</code></pre><h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+<pre><code class="lang-ruby">puts <span class="hljs-number">5</span> * (<span class="hljs-number">12</span> - <span class="hljs-number">8</span>) + -<span class="hljs-number">15</span>
+puts <span class="hljs-number">98</span> + (<span class="hljs-number">59872</span> / (<span class="hljs-number">13</span> * <span class="hljs-number">8</span>)) * -<span class="hljs-number">52</span>
+</code></pre>
+<p>Eso resulta en:</p>
+<pre><code class="lang-html">5
+-29802
+</code></pre>
+<h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
 <p>Escribe un programa que te diga:</p>
 <ul>
-<li>¿cuántas horas hay en un año?</li>
-<li>¿cuántos minutos hay en una década??</li>
-<li>¿cuántos segundos de edad tiene usted?</li>
-<li>¿cuántos chocolates espera comer en su vida?</li>
+<li>¿Cuántas horas hay en un año?</li>
+<li>¿Cuántos minutos hay en una década??</li>
+<li>¿Cuántos segundos de edad tienes?</li>
+<li>¿Cuántos chocolates esperas comer en tu vida?</li>
 <li><strong>Advertencia:</strong> ¡Esta parte del programa puede tomar tiempo para computarse!</li>
 </ul>
 <p>Aquí hay una pregunta más difícil:</p>
 <ul>
 <li>Si tengo 1031 millones de segundos de edad, ¿cuántos años tengo?</li>
 </ul>
-<p>Cuando termine de jugar con números, echemos un vistazo
-a algunos <a href="/aprende.a.programar/capitulos/textos.html">textos</a>.</p>
+<p>Cuando termines de jugar con números, echemos un vistazo a cómo manejar
+<a href="/aprende.a.programar/capitulos/textos.html">textos</a> en Ruby.</p>
 
                     
                     </section>
