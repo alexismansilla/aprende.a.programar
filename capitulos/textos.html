@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="2" data-basepath=".." data-revision="1397782815675">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="2" data-basepath=".." data-revision="1397787568148">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -237,137 +237,128 @@ usar mi lenguaje de programación favorito: _Ruby_.">
                     <section class="normal" id="section-gitbook_12">
                     
                         <h1 id="textos">Textos</h1>
-<p>Así que hemos aprendido todo acerca de
-<a href="/capitulos/01-numeros.markdown">números</a>,
-¿pero qué acerca de letras?  ¿palabras?  ¿textos?</p>
-<p>Nos referimos a grupos de letras en un programa como <dfn>textos</dfn>.  (Tú puedes
-pensar en letras impresas siendo ensartadas en un cartel.)
-Aquí hay algunos textos:</p>
-<pre><code><span class="hljs-string">'Hola.'</span>
-<span class="hljs-string">'Ruby la rompe.'</span>
-<span class="hljs-string">'5 es mi número favorito... ¿Cuál es el tuyo?'</span>
-<span class="hljs-string">'Snoopy dice #%^?&amp;*@! cuando le aplastan el dedo del pie.'</span>
-<span class="hljs-string">'     '</span>
-<span class="hljs-string">''</span>
-</code></pre><p>Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos,
-y espacios dentro... más que solo palabras. Ese último texto
-no tiene nada y podemos llamarlo un texto <dfn>vacío</dfn>.</p>
+<p>Así que hemos aprendido todo acerca de <a href="aprende.a.programar/capitulos/numeros.html">números</a>,
+¿pero qué hay acerca de letras?, ¿palabras? o ¿textos?</p>
+<p>Nos referimos a grupos de letras en un programa como <strong>textos</strong>. Tú puedes
+pensar en letras impresas siendo insertadas en un cartel. Aquí hay algunos
+textos:</p>
+<pre><code class="lang-html">"Hola."
+"Ruby la rompe."
+"5 es mi número favorito... ¿Cuál es el tuyo?"
+"Snoopy dice #%^?&amp;*@! cuando le aplastan el dedo del pie."
+"     "
+""
+</code></pre>
+<p>Como puedes ver, los textos pueden tener puntuación, dígitos, símbolos
+y espacios dentro ... más que solo palabras. Ese último texto no tiene
+nada y podemos llamarlo un texto <strong>vacío</strong>.</p>
 <p>Hemos estado usando <code>puts</code> para imprimir números, intentémoslo con textos:</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Hola, mundo!'</span>
-puts <span class="hljs-string">''</span>
-puts <span class="hljs-string">'Adiós.'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Hola Mundo
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Hola, mundo!"</span>
+puts <span class="hljs-string">""</span>
+puts <span class="hljs-string">"Adiós."</span>
+</code></pre>
+<p>El resultado es el siguiente:</p>
+<pre><code class="lang-html">Hola Mundo
 
 Adiós
-</code></pre><p>Eso funcionó bien. Ahora inténtalo con algún texto tuyo.</p>
+</code></pre>
+<p>Eso funcionó muy bien. Ahora inténtalo con algún texto tuyo.</p>
 <h2 id="aritm-tica-de-textos">Aritmética de textos</h2>
-<p>Igual que hacer hacer aritmética con números, ¡tú puedes también hacer
-aritmética con textos! Bueno, algo así... puedes sumar textos, digamos.
-Intentemos sumar dos textos y ver que hace
-<code>puts</code> con eso.</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Me gusta'</span> + <span class="hljs-string">'el pastel de manzana.'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-keyword">Me</span> gustael pastel de manzana
-</code></pre><p>Whoops! Me olvidé de poner un espacio entre <code>&#39;Me gusta&#39;</code> y <code>&#39;el pastel de manzana.&#39;</code>.
-Los espacios no importan generalmente salvo si lo hacen dentro de los textos.
-(Es verdad lo que dicen: las computadoras no hacen lo que tú <em>quieres</em>
-que hagan, solo lo que tú <em>le dices</em>  que hagan) Intentémoslo nuevamente:</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Me gusta '</span> + <span class="hljs-string">'el pastel de manzana.'</span>
-puts <span class="hljs-string">'Me gusta'</span> + <span class="hljs-string">' el pastel de manzana.'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-keyword">Me</span> gusta el pastel de manzana
-<span class="hljs-keyword">Me</span> gusta el pastel de manzana
-</code></pre><p>(Como puedes ver, no importó a que texto le agregué el espacio)</p>
-<p>Así que puedes sumar textos, ¡pero también puedes multiplicarlas!
-(Por un número ...) Observa esto:</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'parpadeo '</span> * <span class="hljs-number">4</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>batea tus párpados
-</code></pre><p>(Solo bromeaba, en realidad muestra esto):</p>
-<pre><code>parpadeo parpadeo parpadeo parpadeo
-</code></pre><p>Si lo piensas, tiene todo el sentido. Después de todo,
-<code>7*3</code> realmente solo significa <code>7+7+7</code>, así que <code>&#39;moo&#39;*3</code> solo
-significa <code>&#39;moo&#39;+&#39;moo&#39;+&#39;moo&#39;</code>.</p>
-<h2 id="-12-vs-12-"><code>12</code> vs <code>&#39;12&#39;</code></h2>
-<p>Antes de ir más allá, debemos asegurarnos de entender la
-diferencia entre <em>números</em> y <em>dígitos</em>.
-<code>12</code> es un número, pero <code>&#39;12&#39;</code> es un texto de dos dígitos.</p>
+<p>Al igual que hacer aritmética con números, ¡tú también puedes hacer
+aritmética con textos! Bueno, algo así ... digamos que puedes suma
+textos. Intentemos sumar dos textos y ver que hace <code>puts</code> con eso.</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Me gusta"</span> + <span class="hljs-string">"el pastel de manzana."</span>
+</code></pre>
+<pre><code class="lang-html">Me gustael pastel de manzana
+</code></pre>
+<p>Whoops! Me olvidé de poner un espacio entre <code>&quot;Me gusta&quot;</code> y
+<code>&quot;el pastel de manzana.&quot;</code>. Los espacios generalmente no importan salvo si
+se escriben dentro de los textos (es verdad lo que dicen: las computadoras
+no hacen lo que tú <em>quieres</em> que hagan, sólo lo que tú <em>les dices</em> que
+hagan). Intentémoslo nuevamente:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Me gusta "</span> + <span class="hljs-string">"el pastel de manzana."</span>
+puts <span class="hljs-string">"Me gusta"</span> + <span class="hljs-string">" el pastel de manzana."</span>
+</code></pre>
+<pre><code class="lang-html">Me gusta el pastel de manzana
+Me gusta el pastel de manzana
+</code></pre>
+<p>Como puedes ver, no importó a que texto le agregué el espacio.</p>
+<p>Así que puedes sumar textos, pero ... ¡también puedes multiplicarlos! (por
+un número ...). Observa esto:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"parpadeo "</span> * <span class="hljs-number">4</span>
+</code></pre>
+<pre><code class="lang-html">batea tus párpados
+</code></pre>
+<p>Solo bromeaba, en realidad muestra esto:</p>
+<pre><code class="lang-html">parpadeo parpadeo parpadeo parpadeo
+</code></pre>
+<p>Si lo piensas, tiene mucho sentido. Después de todo, <code>7 * 3</code> realmente
+sólo significa <code>7 + 7 + 7</code>, así que <code>&quot;moo&quot; * 3</code> sólo significa
+<code>&quot;moo&quot; + &quot;moo&quot; + &quot;moo&quot;</code>.</p>
+<h2 id="-12-vs-12-"><code>12</code> vs <code>&quot;12&quot;</code></h2>
+<p>Antes de ir más allá, debemos asegurarnos de entender la diferencia entre
+números y dígitos. <code>12</code> es un número, pero <code>&quot;12&quot;</code> es un texto de dos
+dígitos.</p>
 <p>Juguemos con esto un poco:</p>
-<p><em>Código:</em></p>
-<pre><code>puts  <span class="hljs-number">12</span>  +  <span class="hljs-number">12</span>
-puts <span class="hljs-string">'12'</span> + <span class="hljs-string">'12'</span>
-puts <span class="hljs-string">'12  +  12'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>24
+<pre><code class="lang-ruby">puts  <span class="hljs-number">12</span>  +  <span class="hljs-number">12</span>
+puts <span class="hljs-string">"12"</span> + <span class="hljs-string">"12"</span>
+puts <span class="hljs-string">"12  +  12"</span>
+</code></pre>
+<pre><code class="lang-html">24
 1212
 12  +  12
-</code></pre><p>Y qué sucede con esto?:</p>
-<p><em>Código:</em></p>
-<pre><code>puts  <span class="hljs-number">2</span>  *  <span class="hljs-number">5</span>
-puts <span class="hljs-string">'2'</span> *  <span class="hljs-number">5</span>
-puts <span class="hljs-string">'2  *  5'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>10
+</code></pre>
+<p>Y qué sucede con esto?:</p>
+<pre><code class="lang-ruby">puts  <span class="hljs-number">2</span>  *  <span class="hljs-number">5</span>
+puts <span class="hljs-string">"2"</span> *  <span class="hljs-number">5</span>
+puts <span class="hljs-string">"2  *  5"</span>
+</code></pre>
+<pre><code class="lang-html">10
 22222
 2  *  5
-</code></pre><p>Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
-cuidado en cómo mezclas tus textos y tus números podrías encontrarte con...</p>
+</code></pre>
+<p>Estos ejemplos fueron bastante directos. De cualquier modo, si no tienes
+cuidado en cómo mezclas textos y números podrías encontrarte con ...</p>
 <h2 id="problemas">Problemas</h2>
-<p>En este punto podrías haber probado algunas cosas que
-<em>no funcionaron</em>. Si no lo has hecho, aquí hay algunas:</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'12'</span> + <span class="hljs-number">12</span>
-puts <span class="hljs-string">'2'</span> * <span class="hljs-string">'5'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>can<span class="hljs-attribute">'t</span> convert Fixnum into <span class="hljs-typename">String</span> (TypeError)
-</code></pre><p>Hmmm... un mensaje de error.  El problema es que en realidad
-no puedes sumar un número a un texto, o multiplicar
-un texto por otro texto. No tiene más sentido que esto:</p>
-<pre><code>puts <span class="hljs-string">'Betty'</span> + <span class="hljs-number">12</span>
-puts <span class="hljs-string">'Fred'</span> * <span class="hljs-string">'John'</span>
-</code></pre><p>Algo más para tener cuidado: Puedes escribir <code>&#39;pig&#39;*5</code> en un programa,
-dado que sólo significa <code>5</code> veces el texto <code>&#39;pig&#39;</code> todo
-sumado. De cualquier modo,
-tú <em>no puedes</em> escribir <code>5*&#39;pig&#39;</code>, ya que eso significa <code>&#39;pig&#39;</code>
+<p>En este punto podrías haber probado algunas cosas que no funcionaron. Si
+no lo has hecho, aquí hay algunas:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"12"</span> + <span class="hljs-number">12</span>
+puts <span class="hljs-string">"2"</span> * <span class="hljs-string">"5"</span>
+</code></pre>
+<pre><code class="lang-html">can&#39;t convert Fixnum into String (TypeError)
+</code></pre>
+<p>Hmmm... un mensaje de error. El problema es que en realidad no puedes sumar
+un número a un texto o multiplicar un texto por otro texto. Tiene tan poco
+sentido como esto:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Betty"</span> + <span class="hljs-number">12</span>
+puts <span class="hljs-string">"Fred"</span> * <span class="hljs-string">"John"</span>
+</code></pre>
+<p>Algo más para tener cuidado: Puedes escribir <code>&quot;pig&quot; * 5</code> en un programa,
+dado que sólo significa <code>5</code> veces el texto <code>&quot;pig&quot;</code> todo junto. De cualquier
+modo, tú <em>no puedes</em> escribir <code>5 * &quot;pig&quot;</code>, ya que eso significa <code>&quot;pig&quot;</code>
 veces el número <code>5</code>, lo cual es simplemente tonto.</p>
-<p>Finalmente, y si quisieras que tu programa imprimiera
-<code>¡Mi nombre es O&#39;hara!</code>?  Podrías intentar:</p>
-<pre><code><span class="hljs-function_or_atom">puts</span> <span class="hljs-string">'¡Mi nombre es O'</span><span class="hljs-function_or_atom">hara</span><span class="hljs-exclamation_mark">!</span><span class="hljs-string">'</span>
-</code></pre><p>Bueno, <em>eso</em> no funcionará; No intentaré ni ejecutarlo.
-La computadora pensó que habíamos terminado con el texto.
-(Esta es la razón de porque es lindo tener un editor de
-texto que haga <dfn>coloreo sintáctico</dfn> por ti)
-¿Entonces, cómo permitimos que la computadora sepa que
-queremos permanecer en el texto? Tenemos que <dfn>escapar</dfn>
-el apóstrofe, de esta manera:</p>
-<pre><code>puts <span class="hljs-string">'¡Mi nombre es O\'</span>hara!<span class="hljs-string">'</span>
-</code></pre><p>La barra invertida es el carácter de escape. En otras palabras,
-si tú tienes una barra invertida y otro carácter, ellos a veces son
-convertidos a otro carácter. Las únicas cosas que una barra invertida
-escapa son los apóstrofes y las propias barras invertidas. (Si lo
-piensas un poco, los caracteres escapados siempre se escapan a sí mismo)
-Unos pocos ejemplos vendrían muy bien, me parece:</p>
-<p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'¡Mi nombre es O\'</span>hara!<span class="hljs-string">'
-puts '</span>barra invertida al <span class="hljs-keyword">final</span> del texto:  \\<span class="hljs-string">'
-puts '</span>arriba\\abajo<span class="hljs-string">'
-puts '</span>arriba\abajo<span class="hljs-string">'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡Mi nombre es O'hara!
-barra invertida al final del texto:  <span class="hljs-command">\
-</span>arriba<span class="hljs-command">\abajo</span>
-arriba<span class="hljs-command">\abajo</span>
-</code></pre><p>Dado que la barra invertida <em>no</em> escapa un `&#39;d&#39;,
-pero <em>si</em> si se escapa a si misma, esos dos últimos caracteres
-son idénticos. No parecen lo mismo en el código, pero en tu computadora
-son realmente los mismos.</p>
-<p>Si tienes alguna pregunta, solo <a href="/capitulos/03-variables.html">¡sigue leyendo!</a>
-No podría contestar cada pregunta en <em>esta</em> página, después de todo.</p>
+<p>Finalmente, por ejemplo, si quisieras que tu programa imprimiera
+<code>¡Mi sobrenombre es &quot;Pepe&quot;!</code>?  Podrías intentar:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"¡Mi sobrenombre es "</span><span class="hljs-constant">Pepe</span><span class="hljs-string">"!"</span>
+</code></pre>
+<p>Bueno, eso no va a funcionar. La computadora no va a poder ejecutarlo
+porque piensa que el texto termina en el segundo <code>&quot;</code> (antes de <code>Pepe</code>)
+y que <code>Pepe</code> es un método de Ruby, lo cual no es para nada cierto.</p>
+<p>Entonces, ¿cómo hacemos para que la computadora entienda el texto
+que incluye doble comillas (<code>&quot;</code>)? Olvidé mencionarte que también
+puedes usar comillas simples (<code>&#39;</code>) para escribir texto en Ruby.</p>
+<p>Entonces, podrías combinar comillas simples (<code>&#39;</code>) o dobles (<code>&quot;</code>) según
+lo requieras. Es más fácil de entender, si miramos los siguientes
+ejemplos:</p>
+<pre><code class="lang-ruby">puts <span class="hljs-string">"Mi nombre es Jo'C."</span>
+puts <span class="hljs-string">'¡Mi sobrenombre es "Pepe"!'</span>
+</code></pre>
+<pre><code class="lang-html">Mi nombre es Jo&#39;C
+¡Mi sobrenombre es &quot;Pepe&quot;!
+</code></pre>
+<p>Si tiene algunas dudas, <a href="/aprende.a.programar/capitulos/variables.html">¡sigue leyendo!</a>
+Vas a encontrar muchas respuestas a continuación (después de todo, no
+podría contestar cada pregunta en tan sólo una página).</p>
 
                     
                     </section>
