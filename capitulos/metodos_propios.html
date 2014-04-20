@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="8" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="8" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -247,7 +247,7 @@ sicología. De los estudiantes de sicología que he conocido y
 de los cuestionarios que me han dado, esto sería algo similar
 a:</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Hola, y gracias por tomarse el tiempo para'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, y gracias por tomarse el tiempo para'</span>
 puts <span class="hljs-string">'que me ayude con este experimento. Mi experimento'</span>
 puts <span class="hljs-string">'tiene que ver con tu gusto acerca de'</span>
 puts <span class="hljs-string">'la comida mexicana. Basta con pensar en la comida mexicana'</span>
@@ -258,68 +258,68 @@ puts
 
 <span class="hljs-comment">#  Preguntaremos, pero ignoraremos sus respuestas.</span>
 
-buenaRespuesta = <span class="hljs-constant">false</span>
-<span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenaRespuesta)
+buenaRespuesta = <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenaRespuesta)
   puts <span class="hljs-string">'¿Te gusta comer tacos?'</span>
   respuesta = gets.chomp.downcase
-  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> respuesta == <span class="hljs-string">'no'</span>)
-    buenaRespuesta = <span class="hljs-constant">true</span>
+  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> respuesta == <span class="hljs-string">'no'</span>)
+    buenaRespuesta = <span class="hljs-keyword">true</span>
   <span class="hljs-keyword">else</span>
     puts <span class="hljs-string">'Por favor, responda "si" o "no".'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-buenaRespuesta = <span class="hljs-constant">false</span>
-<span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenaRespuesta)
+buenaRespuesta = <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenaRespuesta)
   puts <span class="hljs-string">'¿Te gusta comer burritos?'</span>
   respuesta = gets.chomp.downcase
-  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> respuesta == <span class="hljs-string">'no'</span>)
-    buenaRespuesta = <span class="hljs-constant">true</span>
+  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> respuesta == <span class="hljs-string">'no'</span>)
+    buenaRespuesta = <span class="hljs-keyword">true</span>
   <span class="hljs-keyword">else</span>
     puts <span class="hljs-string">'Por favor, responda "si" o "no".'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
 <span class="hljs-comment">#  Presta atención a *esta* respuesta.</span>
-buenaRespuesta = <span class="hljs-constant">false</span>
-<span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenaRespuesta)
+buenaRespuesta = <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenaRespuesta)
   puts <span class="hljs-string">'¡Mojas la cama?'</span>
   respuesta = gets.chomp.downcase
-  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> respuesta == <span class="hljs-string">'no'</span>)
-    buenaRespuesta = <span class="hljs-constant">true</span>
+  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> respuesta == <span class="hljs-string">'no'</span>)
+    buenaRespuesta = <span class="hljs-keyword">true</span>
     <span class="hljs-keyword">if</span> respuesta == <span class="hljs-string">'si'</span>
-      mojasLaCama = <span class="hljs-constant">true</span>
+      mojasLaCama = <span class="hljs-keyword">true</span>
     <span class="hljs-keyword">else</span>
-      mojasLaCama = <span class="hljs-constant">false</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+      mojasLaCama = <span class="hljs-keyword">false</span>
+    <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">else</span>
     puts <span class="hljs-string">'Por favor, responda "si" o "no".'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-buenaRespuesta = <span class="hljs-constant">false</span>
-<span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenaRespuesta)
+buenaRespuesta = <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenaRespuesta)
   puts <span class="hljs-string">'¿Te gusta comer chimichangas?'</span>
   respuesta = gets.chomp.downcase
-  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> respuesta == <span class="hljs-string">'no'</span>)
-    buenaRespuesta = <span class="hljs-constant">true</span>
+  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> respuesta == <span class="hljs-string">'no'</span>)
+    buenaRespuesta = <span class="hljs-keyword">true</span>
   <span class="hljs-keyword">else</span>
     puts <span class="hljs-string">'Por favor, responda "si" o "no".'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
 puts <span class="hljs-string">'Solo una cuantas preguntas más...'</span>
 
-buenaRespuesta = <span class="hljs-constant">false</span>
-<span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenaRespuesta)
+buenaRespuesta = <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenaRespuesta)
   puts <span class="hljs-string">'¿Te gusta comer sopapillas?'</span>
   respuesta = gets.chomp.downcase
-  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> respuesta == <span class="hljs-string">'no'</span>)
-    buenaRespuesta = <span class="hljs-constant">true</span>
+  <span class="hljs-keyword">if</span> (respuesta == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> respuesta == <span class="hljs-string">'no'</span>)
+    buenaRespuesta = <span class="hljs-keyword">true</span>
   <span class="hljs-keyword">else</span>
     puts <span class="hljs-string">'Por favor, responda "si" o "no".'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
 <span class="hljs-comment">#  Preguntas otras cosas sobre la comida mexicana.</span>
 
@@ -334,14 +334,15 @@ puts <span class="hljs-string">'con la esperanza de que respondería más'</span
 puts <span class="hljs-string">'honestamente. Gracias de nuevo.'</span>
 puts
 puts mojasLaCama
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Hola, y gracias por tomarse el tiempo para
-que me ayude <span class="hljs-stream">con</span> este experimento. Mi experimento
-tiene que ver <span class="hljs-stream">con</span> tu gusto acerca de
-la comida mexicana. Basta <span class="hljs-stream">con</span> pensar en la comida mexicana
-y tratar de contestar todas las preguntas <span class="hljs-stream">con</span> honestidad,
-ya sea <span class="hljs-stream">con</span> un "sí" o un "no". Mi experimento
-no tiene nada que ver <span class="hljs-stream">con</span> mojar la cama.
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Hola, y gracias por tomarse el tiempo para
+que me ayude con este experimento. Mi experimento
+tiene que ver con tu gusto acerca de
+la comida mexicana. Basta con pensar en la comida mexicana
+y tratar de contestar todas las preguntas con honestidad,
+ya sea con un &quot;sí&quot; o un &quot;no&quot;. Mi experimento
+no tiene nada que ver con mojar la cama.
 
 ¿Te gusta comer tacos?
 si
@@ -349,7 +350,7 @@ si
 si
 ¡Mojas la cama?
 de ninguna manera
-Por favor, responda "si" o "no".
+Por favor, responda &quot;si&quot; o &quot;no&quot;.
 ¡Mojas la cama?
 NO
 ¿Te gusta comer chimichangas?
@@ -359,16 +360,17 @@ Solo una cuantas preguntas más...
 si
 
 Interrogatorio:
-Gracias por tomarse el tiempo para ayudar <span class="hljs-stream">con</span>
+Gracias por tomarse el tiempo para ayudar con
 este experimento. De hecho, este experimento
-no tiene nada que ver <span class="hljs-stream">con</span> la comida mexicana. Es
+no tiene nada que ver con la comida mexicana. Es
 un experimento sobre mojar la cama. La comida mexicana
-ahí para atraparte <span class="hljs-stream">con</span> la guardia baja
-<span class="hljs-stream">con</span> la esperanza de que respondería más
+ahí para atraparte con la guardia baja
+con la esperanza de que respondería más
 honestamente. Gracias de nuevo.
 
 false
-</code></pre><p>Ese fue un programa bastante largo, con mucha repetición.
+</code></pre>
+<p>Ese fue un programa bastante largo, con mucha repetición.
 (Todas las secciones de código sobre las preguntas de comida
 mexicana eran idénticas, y la pregunta sobre mojar la cama fue
 la única pregunta algo diferente).
@@ -376,14 +378,15 @@ La repetición es mala. Sin embargo, no podemos transformar el
 código en un gran bucle o iterador, porque a veces queremos
 hacer algo entre las preguntas. En situaciones como estas,
 es mejor escribir un método. Aquí está como:</p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu
   puts <span class="hljs-string">'muuuuuu...'</span>
 <span class="hljs-keyword">end</span>
-</code></pre><p>Uy... nuestro programa no hizo <code>muuuuuu</code>. ¿Por qué no?, Porque no le dijimos que lo hiciera.
+</code></pre>
+<p>Uy... nuestro programa no hizo <code>muuuuuu</code>. ¿Por qué no?, Porque no le dijimos que lo hiciera.
 Le dijimos <em>cómo</em> hacer <code>muuuuuu</code>, pero nunca le dijimos en realidad que lo <em>haga</em>.
 Intentemos otra vez:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu
   puts <span class="hljs-string">'muuuuuu...'</span>
 <span class="hljs-keyword">end</span>
 
@@ -392,13 +395,15 @@ decirMu
 puts <span class="hljs-string">'coin-coin'</span>
 decirMu
 decirMu
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>muuuuuu<span class="hljs-attribute">...</span>
-muuuuuu<span class="hljs-attribute">...</span>
-coin<span class="hljs-attribute">-coin</span>
-muuuuuu<span class="hljs-attribute">...</span>
-muuuuuu<span class="hljs-attribute">...</span>
-</code></pre><p>Ah, mucho mejor. (En caso que no hables francés, eso fue un pato francés en medio del programa. En
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">muuuuuu...
+muuuuuu...
+coin-coin
+muuuuuu...
+muuuuuu...
+</code></pre>
+<p>Ah, mucho mejor. (En caso que no hables francés, eso fue un pato francés en medio del programa. En
 Francia los patos dicen <em>coin-coin</em>.)</p>
 <p>Por lo tanto, <code>def</code>inimos el método de <code>decirMu</code>. (Nombres de los métodos, al igual que
 los nombres de variables, comienzan con letras minúsculas. Hay unas pocas excepciones, tales
@@ -414,18 +419,20 @@ le diría <code>5+</code>, ¿verdad? Le estás pidiendo 5 que agregue, pero no l
 lo que va a agregar.</p>
 <p>Para agregar un parámetro a <code>decirMu</code> (digamos, el número de muuuuuu), haríamos lo siguiente:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu numeroDeMus
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu numeroDeMus
   puts <span class="hljs-string">'muuuuuuu...'</span>*numeroDeMus
 <span class="hljs-keyword">end</span>
 
 decirMu <span class="hljs-number">3</span>
 puts <span class="hljs-string">'oink-oink'</span>
 decirMu  <span class="hljs-comment">#  Esto debería dar un error porque falta el parámetro.</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>muuuuuuu...muuuuuuu...muuuuuuu...
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">muuuuuuu...muuuuuuu...muuuuuuu...
 oink-oink
-in <span class="hljs-smartquote">`decirMu'</span>: wrong number of arguments (0 for 1) (ArgumentError)
-</code></pre><p><code>numeroDeMus</code> es una variable que apunta al parámetro que se le ha pasado, lo voy a decir de nuevo,
+in `decirMu&#39;: wrong number of arguments (0 for 1) (ArgumentError)
+</code></pre>
+<p><code>numeroDeMus</code> es una variable que apunta al parámetro que se le ha pasado, lo voy a decir de nuevo,
 pero es un poco confuso: <code>numeroDeMus</code> es una variable que apunta al parámetro pasado. Por lo
 tanto, si digito <code>decirMu 3</code>, el parámetro es 3, y la variable <code>numeroDeMus</code> apunta a 3.</p>
 <p>Como puedes ver, el parámetro es ahora <em>requerido</em>. Después de todo, lo que <code>decirMu</code> hace es multiplicar
@@ -437,47 +444,53 @@ el parámetro es lo que se <em>muestra</em>)</p>
 <h2 id="variables-locales">Variables Locales</h2>
 <p>En el siguiente programa hay dos variables:</p>
 <p><em>Código:</em></p>
-<pre><code>def duplicaEsto <span class="hljs-built_in">num</span>
-  numeroVeces2 = <span class="hljs-built_in">num</span>*<span class="hljs-number">2</span>
-  puts <span class="hljs-built_in">num</span>.to_s+<span class="hljs-string">' el doble es '</span>+numeroVeces2.to_s
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>duplicaEsto num
+  numeroVeces2 = num*<span class="hljs-number">2</span>
+  puts num.to_s+<span class="hljs-string">' el doble es '</span>+numeroVeces2.to_s
+<span class="hljs-keyword">end</span>
 
 duplicaEsto <span class="hljs-number">44</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>44 el doble es 88
-</code></pre><p>Las variables son <code>num</code> y <code>numeroVeces2</code>.
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">44 el doble es 88
+</code></pre>
+<p>Las variables son <code>num</code> y <code>numeroVeces2</code>.
 Los dos se encuentran dentro del método <code>duplicaEsto</code>. Estas (y todas las variables
 que hemos visto hasta ahora) son las <em>variables locales</em>. Esto significa que ellos viven
 dentro del método y no pueden salir. Si lo intentas obtendrás un error:</p>
 <p><em>Código:</em></p>
-<pre><code>def duplicaEsto <span class="hljs-built_in">num</span>
-  numeroVeces2 = <span class="hljs-built_in">num</span>*<span class="hljs-number">2</span>
-  puts <span class="hljs-built_in">num</span>.to_s+<span class="hljs-string">' el doble es '</span>+numeroVeces2.to_s
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>duplicaEsto num
+  numeroVeces2 = num*<span class="hljs-number">2</span>
+  puts num.to_s+<span class="hljs-string">' el doble es '</span>+numeroVeces2.to_s
+<span class="hljs-keyword">end</span>
 
 duplicaEsto <span class="hljs-number">44</span>
 puts numeroVeces2.to_s
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>44 el doble es 88
-in <span class="hljs-smartquote">`&lt;main&gt;'</span>: undefined local variable or method <span class="hljs-smartquote">`numeroVeces2'</span> for main:Object (NameError)
-</code></pre><p>Variable local no definida ... De hecho, nos <em>hicieron</em> definir esa variable local, pero
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">44 el doble es 88
+in `<span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>': undefined local variable or method `numeroVeces2' for main:Object (NameError)
+</code></pre>
+<p>Variable local no definida ... De hecho, nos <em>hicieron</em> definir esa variable local, pero
 no es local donde traté de usarlo, es local en el método.</p>
 <p>Esto podría ser un inconveniente, pero en realidad es bastante bueno. Significa que no tienes
 acceso a las variables dentro de los métodos y también significa
 que ellos no tienen acceso a <em>tus</em> variables y por lo tanto no pueden meter la pata:</p>
 <p><em>Código:</em></p>
-<pre><code>def pequenaMascota <span class="hljs-keyword">var</span>
-  <span class="hljs-keyword">var</span> = <span class="hljs-keyword">nil</span>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>pequenaMascota var
+  var = <span class="hljs-keyword">nil</span>
   puts <span class="hljs-string">'¡HAHA!  ¡He malogrado tu variable!'</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-keyword">var</span> = <span class="hljs-string">'¡Tu ni siquiera puedes tocar mi variable!'</span>
-pequenaMascota <span class="hljs-keyword">var</span>
-puts <span class="hljs-keyword">var</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡<span class="hljs-variable">HAHA</span><span class="hljs-exclamation_mark">!</span>  ¡<span class="hljs-variable">He</span> <span class="hljs-function_or_atom">malogrado</span> <span class="hljs-function_or_atom">tu</span> <span class="hljs-function_or_atom">variable</span><span class="hljs-exclamation_mark">!</span>
-¡<span class="hljs-variable">Tu</span> <span class="hljs-function_or_atom">ni</span> <span class="hljs-function_or_atom">siquiera</span> <span class="hljs-function_or_atom">puedes</span> <span class="hljs-function_or_atom">tocar</span> <span class="hljs-function_or_atom">mi</span> <span class="hljs-function_or_atom">variable</span><span class="hljs-exclamation_mark">!</span>
-</code></pre><p>En realidad, hay <em>dos</em> variables en el programa que se llaman <code>var</code>: uno en el
+var = <span class="hljs-string">'¡Tu ni siquiera puedes tocar mi variable!'</span>
+pequenaMascota var
+puts var
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡HAHA!  ¡He malogrado tu variable!
+¡Tu ni siquiera puedes tocar mi variable!
+</code></pre>
+<p>En realidad, hay <em>dos</em> variables en el programa que se llaman <code>var</code>: uno en el
 interior de <code>pequenaMascota</code> y otro fuera de él. Cuando llamamos a <code>pequenaMascota var</code>, nosotros
 en realidad pasamos de un <code>var</code> a otro de manera que ambos están apuntando al mismo texto.
 Luego <code>pequenaMascota</code> apuntó a su propio <code>var</code> local a <code>nil</code>, pero que no hizo nada al <code>var</code>
@@ -492,12 +505,13 @@ que lo llamó, y lo que el programa muestra en la pantalla como hace <code>puts<
 cuenta que <code>5+3</code> retorna <code>8</code>, cosa que <em>no</em> hace la salida <code>8</code>.</p>
 <p>Entonces, ¿qué es lo que <em>hace</em> <code>puts</code> al retornar? No nos importó antes, pero vamos a ver ahora:</p>
 <p><em>Código:</em></p>
-<pre><code>valorRetorno = puts <span class="hljs-string">'Esto es lo que puts retorna:'</span>
+<pre><code class="lang-ruby">valorRetorno = puts <span class="hljs-string">'Esto es lo que puts retorna:'</span>
 puts valorRetorno
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Esto es lo que <span class="hljs-built_in">puts</span> retorna:
-cero
-</code></pre><p>Así que el primer <code>puts</code> retornó <code>nil</code>. A pesar de que no lo prueba, el segundo <code>puts</code>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Esto es lo que puts retorna:
+</code></pre>
+<p>Así que el primer <code>puts</code> retornó <code>nil</code>. A pesar de que no lo prueba, el segundo <code>puts</code>
 también lo hizo, <code>puts</code> siempre retorna <code>nil</code>. Cada método tiene que devolver algo,
 incluso si el valor es solo <code>nil</code>.</p>
 <p>Tómate un descanso rápido y escribe un programa para averiguar lo que <code>decirMu</code> devuelve.</p>
@@ -507,17 +521,19 @@ la última línea del método. En el caso de <code>decirMu</code>, esto signific
 devuelve <code>nil</code>. Si queremos que todos nuestros métodos devuelvan el texto <code>&#39;submarino amarillo&#39;</code>,
 sólo tenemos que ponerla al final de ellos:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu numeroDeMus
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>decirMu numeroDeMus
   puts <span class="hljs-string">'muuuuuu...'</span>*numeroDeMus
   <span class="hljs-string">'submarino amarillo'</span>
 <span class="hljs-keyword">end</span>
 
 x = decirMu <span class="hljs-number">2</span>
 puts x
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>muuuuuu<span class="hljs-attribute">...</span> muuuuuuu<span class="hljs-attribute">...</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">muuuuuu... muuuuuuu...
 submarino amarillo
-</code></pre><p>Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
+</code></pre>
+<p>Vamos a tratar con el experimento de sicología otra vez, pero esta vez vamos a
 escribir un método que haga las preguntas por nosotros. Se tendrá que tomar la pregunta
 como un parámetro, y devolver <code>true</code> si contestan que <code>sí</code>, y <code>false</code> si responden que <code>no</code>.
 (Aún cuando la mayoría de veces ignoramos la respuesta, sigue siendo una buena idea
@@ -525,26 +541,26 @@ que nuestro método devuelva la respuesta. De esta manera se puede utilizar para
 de mojar la cama también.) También voy a acortar el saludo y el interrogatorio de manera
 que sea más fácil de leer:</p>
 <p><em>Código:</em></p>
-<pre><code>def preguntar pregunta
-  buenarespuesta = <span class="hljs-constant">false</span>
-  <span class="hljs-keyword">while</span> (<span class="hljs-operator">not</span> buenarespuesta)
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>preguntar pregunta
+  buenarespuesta = <span class="hljs-keyword">false</span>
+  <span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> buenarespuesta)
     puts pregunta
     reply = gets.chomp.downcase
 
-    <span class="hljs-keyword">if</span> (reply == <span class="hljs-string">'si'</span> <span class="hljs-operator">or</span> reply == <span class="hljs-string">'no'</span>)
-      buenarespuesta = <span class="hljs-constant">true</span>
+    <span class="hljs-keyword">if</span> (reply == <span class="hljs-string">'si'</span> <span class="hljs-keyword">or</span> reply == <span class="hljs-string">'no'</span>)
+      buenarespuesta = <span class="hljs-keyword">true</span>
       <span class="hljs-keyword">if</span> reply == <span class="hljs-string">'si'</span>
-        answer = <span class="hljs-constant">true</span>
+        answer = <span class="hljs-keyword">true</span>
       <span class="hljs-keyword">else</span>
-        answer = <span class="hljs-constant">false</span>
-      <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+        answer = <span class="hljs-keyword">false</span>
+      <span class="hljs-keyword">end</span>
     <span class="hljs-keyword">else</span>
       puts <span class="hljs-string">'Por favor, responder "si" o "no".'</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
 
   answer  <span class="hljs-comment">#  Esto es lo que retorna (`true` o `false`).</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 puts <span class="hljs-string">'Hola, y gracias por...'</span>
 puts
@@ -564,33 +580,35 @@ puts <span class="hljs-string">'Interrogatorio:'</span>
 puts <span class="hljs-string">'Gracias por...'</span>
 puts
 puts mojasLaCama
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¿Te gusta comer tacos<span class="hljs-subst">?</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¿Te gusta comer tacos?
 si
-¿Te gusta comer burritos<span class="hljs-subst">?</span>
+¿Te gusta comer burritos?
 si
-¿Mojas la cama<span class="hljs-subst">?</span>
+¿Mojas la cama?
 de ninguna manera
-Por favor, responder <span class="hljs-string">"si"</span> o <span class="hljs-string">"no"</span><span class="hljs-built_in">.</span>
-¿Mojas la cama<span class="hljs-subst">?</span>
+Por favor, responder &quot;si&quot; o &quot;no&quot;.
+¿Mojas la cama?
 NO
-¿Te gusta comer chimichangas<span class="hljs-subst">?</span>
+¿Te gusta comer chimichangas?
 si
-¿Te gusta comer sopapillas<span class="hljs-subst">?</span>
+¿Te gusta comer sopapillas?
 si
-¿Te gusta comer tamales<span class="hljs-subst">?</span>
+¿Te gusta comer tamales?
 si
-Solo unas preguntas mas<span class="hljs-attribute">...</span>
-¿Te gusta beber horchata<span class="hljs-subst">?</span>
+Solo unas preguntas mas...
+¿Te gusta beber horchata?
 si
-¿Te gusta comer flautas<span class="hljs-subst">?</span>
+¿Te gusta comer flautas?
 si
 
 Interrogatorio:
-Gracias por<span class="hljs-attribute">...</span>
+Gracias por...
 
-<span class="hljs-literal">false</span>
-</code></pre><p>No está mal, ¿eh?. Hemos sido capaces de añadir más preguntas (y la adición de
+false
+</code></pre>
+<p>No está mal, ¿eh?. Hemos sido capaces de añadir más preguntas (y la adición de
 preguntas ahora es <em>fácil</em>), y nuestro programa es aún más corto!. Es una gran mejora -
 El sueño de un programador perezoso.</p>
 <h2 id="un-ejemplo-m-s-grande">Un ejemplo más grande</h2>
@@ -602,7 +620,7 @@ Por ahora, vamos a trabajar solamente con números enteros entre 0 a 100.</p>
 en el método usando <code>return</code> e introduce un nuevo giro en las bifurcaciones: <code>elsif</code>.
 Debe quedar claro en el contexto de cómo funcionan estos.)</em></p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>numeroEnEspanol numero
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>numeroEnEspanol numero
   <span class="hljs-comment">#  Solo estamos considerando los números de 0-100.</span>
   <span class="hljs-keyword">if</span> numero &lt; <span class="hljs-number">0</span>
     <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingrese un numero mayor o igual a cero.'</span>
@@ -729,8 +747,9 @@ puts numeroEnEspanol( <span class="hljs-number">32</span>)
 puts numeroEnEspanol( <span class="hljs-number">88</span>)
 puts numeroEnEspanol( <span class="hljs-number">99</span>)
 puts numeroEnEspanol(<span class="hljs-number">100</span>)
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>cero
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">cero
 nueve
 diez
 veintiuno
@@ -739,20 +758,21 @@ treintaidos
 ochentaiocho
 noventainueve
 cien
-</code></pre><p>Bueno, sin duda hay algunas cosas acerca de este programa que no me gustan. En primer
+</code></pre>
+<p>Bueno, sin duda hay algunas cosas acerca de este programa que no me gustan. En primer
 lugar hay demasiada repetición. En segundo lugar, no se ocupa de los números mayores de</p>
 <ol>
 <li>En tercer lugar, hay muchos casos especiales, demasiados <code>return</code>s. Veamos ahora
 algunas matrices y tratar de limpiar un poco:</li>
 </ol>
 <p><em>Código:</em></p>
-<pre><code>def numeroEnEspanol numero
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>numeroEnEspanol numero
   <span class="hljs-keyword">if</span> numero &lt; <span class="hljs-number">0</span>  <span class="hljs-comment">#  No numeros negativos</span>
-    <span class="hljs-constant">return</span> <span class="hljs-string">'Por favor ingresar un numero que nos ea negativo.'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Por favor ingresar un numero que nos ea negativo.'</span>
+  <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">if</span> numero == <span class="hljs-number">0</span>
-    <span class="hljs-constant">return</span> <span class="hljs-string">'cero'</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'cero'</span>
+  <span class="hljs-keyword">end</span>
 
   <span class="hljs-comment">#  No mas casos especiales!  No mas returns!</span>
 
@@ -793,14 +813,14 @@ algunas matrices y tratar de limpiar un poco:</li>
     <span class="hljs-keyword">if</span> izquierda &gt; <span class="hljs-number">0</span>
       <span class="hljs-comment">#  So escribir  'dos ciencincuentaiuno'...</span>
       numeroDeTexto = numeroDeTexto + <span class="hljs-string">' '</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
 
   escrito = izquierda/<span class="hljs-number">10</span>          <span class="hljs-comment">#  Cuantas decenas faltan escribir?</span>
   izquierda  = izquierda - escrito*<span class="hljs-number">10</span>  <span class="hljs-comment">#  Resta de estas decenas.</span>
 
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
-    <span class="hljs-keyword">if</span> ((escrito == <span class="hljs-number">1</span>) <span class="hljs-operator">and</span> (izquierda &gt; <span class="hljs-number">0</span>))
+    <span class="hljs-keyword">if</span> ((escrito == <span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> (izquierda &gt; <span class="hljs-number">0</span>))
       <span class="hljs-comment">#  No podemos escribir "diez-dos" instead of "doce",</span>
       <span class="hljs-comment">#  hacemos una excepción especial .</span>
       numeroDeTexto = numeroDeTexto + entre11Y19[izquierda-<span class="hljs-number">1</span>]
@@ -809,20 +829,20 @@ algunas matrices y tratar de limpiar un poco:</li>
       <span class="hljs-comment">#  Ya que tomamos el digito que nos faltaba,</span>
       <span class="hljs-comment">#  no tenemos nada mas que escribir.</span>
       izquierda = <span class="hljs-number">0</span>
-    elsif ((escrito ==<span class="hljs-number">2</span> <span class="hljs-operator">and</span> (izquierda&gt;<span class="hljs-number">0</span>)))
+    <span class="hljs-keyword">elsif</span> ((escrito ==<span class="hljs-number">2</span> <span class="hljs-keyword">and</span> (izquierda&gt;<span class="hljs-number">0</span>)))
       <span class="hljs-comment">#  Similar para los veintipico</span>
       numeroDeTexto = numeroDeTexto + entre21Y29[izquierda-<span class="hljs-number">1</span>]
       izquierda = <span class="hljs-number">0</span>
     <span class="hljs-keyword">else</span>
       numeroDeTexto = numeroDeTexto + segundaPosicion[escrito-<span class="hljs-number">1</span>]
       <span class="hljs-comment">#  Es "-1" porque segundaPosicion[3] es 'cuarenta', no 'treinta'.</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">end</span>
 
     <span class="hljs-keyword">if</span> izquierda &gt; <span class="hljs-number">0</span>
       <span class="hljs-comment">#  No escribiremos 'sesentacuatro'...</span>
       numeroDeTexto = numeroDeTexto + <span class="hljs-string">'i'</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
 
   escrito = izquierda  <span class="hljs-comment">#  Cuantos faltan?</span>
   izquierda  = <span class="hljs-number">0</span>     <span class="hljs-comment">#  Restar lo que falta.</span>
@@ -830,11 +850,11 @@ algunas matrices y tratar de limpiar un poco:</li>
   <span class="hljs-keyword">if</span> escrito &gt; <span class="hljs-number">0</span>
     numeroDeTexto = numeroDeTexto + primeraPosicion[escrito-<span class="hljs-number">1</span>]
     <span class="hljs-comment">#  Es "-1" porque primeraPosicion[3] es 'cuatro', no 'tres'.</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
 
   <span class="hljs-comment">#  Ahora solo retornamos "numeroDeTexto"...</span>
   numeroDeTexto
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 puts numeroEnEspanol(  <span class="hljs-number">0</span>)
 puts numeroEnEspanol(  <span class="hljs-number">9</span>)
@@ -850,8 +870,9 @@ puts numeroEnEspanol(<span class="hljs-number">234</span>)
 puts numeroEnEspanol(<span class="hljs-number">3211</span>)
 puts numeroEnEspanol(<span class="hljs-number">999999</span>)
 puts numeroEnEspanol(<span class="hljs-number">1000000000000</span>)
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>cero
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">cero
 nueve
 diez
 once
@@ -865,7 +886,8 @@ dos ciento treintaicuatro
 treintaidos ciento once
 noventainueve ciento noventainueve ciento noventainueve
 uno ciento ciento ciento ciento ciento ciento
-</code></pre><p><em>Ahhhh ....</em> Eso está mucho, mucho mejor. El programa es bastante denso, por lo
+</code></pre>
+<p><em>Ahhhh ....</em> Eso está mucho, mucho mejor. El programa es bastante denso, por lo
 que puse varios comentarios. También funciona con números grandes ... aunque no
 tan bien como cabría esperar. Por ejemplo, creo que &#39; un millón de millones &#39; sería
 un valor de retorno más agradable para que el último número. De hecho, puedes hacer
@@ -880,7 +902,7 @@ en lugar de <code>un mil mil</code>. A continuación, pruebe a añadir miles de 
 ¿Qué tan alto puede llegar?</p>
 </li>
 <li><p>¿Qué hay de <code>tiempoDeMatrimonio</code>? Deberá trabajar casi como <code>numeroEnEspanol</code>, excepto que se
-debe insertar la palabra &quot;y&quot; por todo el lugar, volviendo las cosas como <code>`mil novecientos
+debe insertar la palabra &quot;y&quot; por todo el lugar, volviendo las cosas como <code>&#39;mil novecientos
 setenta y dos&#39;</code>, o como se supone deben verse en las invitaciones de la boda. Te daría
 más ejemplos, pero yo no lo entiendo completamente. Es posible que necesite ponerse en
 contacto con un coordinador de bodas para que le ayude.</p>

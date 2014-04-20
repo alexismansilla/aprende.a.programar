@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="10" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="10" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -250,33 +250,37 @@ como un tipo método excepto que no está dentro de un objeto
 (este bloque <em>es</em> un objeto), y puedes almacenarlo o pasarlo como cualquier
 otro objeto. Es hora de un ejemplo:</p>
 <p><em>Código:</em></p>
-<pre><code>toast = Proc.<span class="hljs-keyword">new</span> <span class="hljs-keyword">do</span>
-  puts <span class="hljs-comment">'¡Aplausos!'</span>
+<pre><code class="lang-ruby">toast = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span>
+  puts <span class="hljs-string">'¡Aplausos!'</span>
 <span class="hljs-keyword">end</span>
 
-toast.<span class="hljs-keyword">call</span>
-toast.<span class="hljs-keyword">call</span>
-toast.<span class="hljs-keyword">call</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡<span class="hljs-variable">Aplausos</span><span class="hljs-exclamation_mark">!</span>
-¡<span class="hljs-variable">Aplausos</span><span class="hljs-exclamation_mark">!</span>
-¡<span class="hljs-variable">Aplausos</span><span class="hljs-exclamation_mark">!</span>
-</code></pre><p>Entonces creé un proc (el cual pienso debería ser pronunciado como &quot;procedimiento&quot;) que
+toast.call
+toast.call
+toast.call
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Aplausos!
+¡Aplausos!
+¡Aplausos!
+</code></pre>
+<p>Entonces creé un proc (el cual pienso debería ser pronunciado como &quot;procedimiento&quot;) que
 contiene un bloque de código, y llamé (<em>call</em>ed) el proc tres
 veces. Como puedes ver, esto es como un método.</p>
 <p>En realidad, son más parecidos a los métodos que te he mostrado, porque los bloques pueden
 tomar parámetros:</p>
 <p><em>Código:</em></p>
-<pre><code>teGusta = Proc.new <span class="hljs-operator"><span class="hljs-keyword">do</span> |algoRico|
+<pre><code class="lang-ruby">teGusta = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |algoRico|
   puts <span class="hljs-string">'¡Me gusta *realmente* el '</span>+algoRico+<span class="hljs-string">'!'</span>
 <span class="hljs-keyword">end</span>
 
-teGusta.<span class="hljs-keyword">call</span> <span class="hljs-string">'chocolate'</span>
-teGusta.<span class="hljs-keyword">call</span> <span class="hljs-string">'ruby'</span></span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡Me gusta <span class="hljs-emphasis">*realmente*</span> el chocolate!
-¡Me gusta <span class="hljs-emphasis">*realmente*</span> el ruby!
-</code></pre><p>Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
+teGusta.call <span class="hljs-string">'chocolate'</span>
+teGusta.call <span class="hljs-string">'ruby'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Me gusta *realmente* el chocolate!
+¡Me gusta *realmente* el ruby!
+</code></pre>
+<p>Muy bien, entonces hemos visto que son los bloques y procs, y como usarlos, pero
 ¿cuál es el punto? ¿Porqué no utilizar simplemente métodos? Bueno, esto es porque
 hay más cosas que no podemos hacer con métodos. En particular, no
 puedes pasar métodos a otros métodos (pero puedes pasar procs dentro de métodos),
@@ -289,30 +293,32 @@ sobre iteradores. Pero vamos a hablar un poco más acerca de esto en breve)</p>
 el proc. Por ejemplo, vamos a decir que queremos hacer antes y después de cierto código que
 se esta ejecutando:</p>
 <p><em>Código:</em></p>
-<pre><code>def hacerAlgoImportante unProc
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerAlgoImportante unProc
   puts <span class="hljs-string">'¡Todo el mundo DETENGANSE!  Tengo algo que hacer...'</span>
   unProc.call
   puts <span class="hljs-string">'A todos: Está hecho.  Continuen con lo que estaban haciendo.'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-decirHola = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span>
+decirHola = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'hola'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-decirAdios = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span>
+decirAdios = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'adios'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 hacerAlgoImportante decirHola
 hacerAlgoImportante decirAdios
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
 hola
-A todos: Está hecho.  Continuen con lo que estaban haciendo.<span class="hljs-comment">'</span>
+A todos: Está hecho.  Continuen con lo que estaban haciendo.&#39;
 ¡Todo el mundo DETENGANSE!  Tengo algo que hacer...
 adios
-A todos: Está hecho.  Continuen con lo que estaban haciendo.<span class="hljs-comment">'</span>
-</code></pre><p>Quizá esto no parezca muy fabuloso... pero lo es. :-)
+A todos: Está hecho.  Continuen con lo que estaban haciendo.&#39;
+</code></pre>
+<p>Quizá esto no parezca muy fabuloso... pero lo es. :-)
 Es común en programacion tener requerimientos estrictos acerca de
 que debe ser hecho y cuando. Si quieres salvar un archivo, por ejemplo,
 tienes que abrir el archivo, escribir la informacion que quieres que
@@ -328,30 +334,31 @@ encontrar información sobre guardar y cargar archivos.)</p>
 deben llamar a un proc. Aquí hay un método el cual podría llamar al proc la mitad de veces
 y otro el cual lo llamará el doble de veces:</p>
 <p><em>Código:</em></p>
-<pre><code>def puedeHacerse unProc
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>puedeHacerse unProc
   <span class="hljs-keyword">if</span> rand(<span class="hljs-number">2</span>) == <span class="hljs-number">0</span>
     unProc.call
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-def hacerDosVeces unProc
+<span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerDosVeces unProc
   unProc.call
   unProc.call
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-parpadeo = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span>
+parpadeo = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'&lt;parpadeo&gt;'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-mirada = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span>
+mirada = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'&lt;mirada&gt;'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 puedeHacerse parpadeo
 puedeHacerse mirada
 hacerDosVeces parpadeo
 hacerDosVeces mirada
-</code></pre><p><em>Resultado:</em></p>
+</code></pre>
+<p><em>Resultado:</em></p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">mirada</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">parpadeo</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">parpadeo</span>&gt;</span>
@@ -371,39 +378,41 @@ que el proc retorne falso (esto es mejor, o el programa finalizará con
 error). El método retornará el último valor no falso retornado por
 el proc.</p>
 <p><em>Código:</em></p>
-<pre><code>def hacerHastaQueSeaFalso primeraentrada, unProc
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerHastaQueSeaFalso primeraentrada, unProc
   entrada  = primeraentrada
   salida = primeraentrada
 
   <span class="hljs-keyword">while</span> salida
     entrada  = salida
     salida = unProc.call entrada
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
 
   entrada
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-construirMatrizDeCuadrados = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |array|
-  ultimonumero = array.<span class="hljs-keyword">last</span>
+construirMatrizDeCuadrados = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |array|
+  ultimonumero = array.last
   <span class="hljs-keyword">if</span> ultimonumero &lt;= <span class="hljs-number">0</span>
-    <span class="hljs-constant">false</span>
+    <span class="hljs-keyword">false</span>
   <span class="hljs-keyword">else</span>
     array.pop                         <span class="hljs-comment">#  Quitar el último número...</span>
     array.push ultimonumero*ultimonumero  <span class="hljs-comment">#  ...y reemplazar este con el último número elevado al cuadrado...</span>
     array.push ultimonumero-<span class="hljs-number">1</span>           <span class="hljs-comment">#  ...seguido por un número menor.</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-siempreFalso = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |soloIgnorame|
-  <span class="hljs-constant">false</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+siempreFalso = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |soloIgnorame|
+  <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">end</span>
 
 puts hacerHastaQueSeaFalso([<span class="hljs-number">5</span>], construirMatrizDeCuadrados).inspect
 puts hacerHastaQueSeaFalso(<span class="hljs-string">'Estoy escribiendo esto a las 3:00 am; ¡alguien que lo finalice!'</span>, siempreFalso)
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-attr_selector">[25, 16, 9, 4, 1, 0]</span>
-<span class="hljs-tag">Estoy</span> <span class="hljs-tag">escribiendo</span> <span class="hljs-tag">esto</span> <span class="hljs-tag">a</span> <span class="hljs-tag">las</span> 3<span class="hljs-pseudo">:00</span> <span class="hljs-tag">am</span>, ¡<span class="hljs-tag">alguien</span> <span class="hljs-tag">que</span> <span class="hljs-tag">lo</span> <span class="hljs-tag">finalice</span>!
-</code></pre><p>Está bien, este es un ejemplo bastante raro, debo admitirlo. Pero esto muestra como
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">[25, 16, 9, 4, 1, 0]
+Estoy escribiendo esto a las 3:00 am, ¡alguien que lo finalice!
+</code></pre>
+<p>Está bien, este es un ejemplo bastante raro, debo admitirlo. Pero esto muestra como
 actúa diferente nuestro método cuando le damos diferentes procs.</p>
 <p>El método <code>inspect</code> es muy parecido a <code>to_s</code> , salvo que la cadena que devuelve
 trata de mostrar el código ruby para crear el objeto que pasó. Aquí se nos muestra
@@ -426,31 +435,31 @@ voy a referirme a esto brevemente.</p>
 cuando se le llama, llama al primer proc y pasa el resultado en el segundo
 proc.</p>
 <p><em>Código:</em></p>
-<pre><code>def compone proc1, proc2
-  Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |x|
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>compone proc1, proc2
+  <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |x|
     proc2.call(proc1.call(x))
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-cuadrado = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |x|
+cuadrado = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |x|
   x * x
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-doble = Proc.<span class="hljs-built_in">new</span> <span class="hljs-built_in">do</span> |x|
+doble = <span class="hljs-constant">Proc</span>.new <span class="hljs-keyword">do</span> |x|
   x + x
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 dobleYCuadrado = compone doble, cuadrado
 cuadradoYDoble = compone cuadrado, doble
 
 puts dobleYCuadrado.call(<span class="hljs-number">5</span>)
 puts cuadradoYDoble.call(<span class="hljs-number">5</span>)
-
-*Resultado:*
-
-<span class="hljs-number">100</span>
-<span class="hljs-number">50</span>
-</code></pre><p>Ten en cuenta que la llamada a <code>proc1</code> tenía que estar dentro de los
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">100
+50
+</code></pre>
+<p>Ten en cuenta que la llamada a <code>proc1</code> tenía que estar dentro de los
 paréntesis para <code>proc2</code> con el fin de que se haga en primer lugar.</p>
 <h2 id="pasando-bloques-no-procedimientos-en-los-m-todos">Pasando Bloques (no Procedimientos) en los Métodos</h2>
 <p>Ok, esto es académicamente interesante pero también algo difícil de usar.
@@ -463,7 +472,7 @@ Ruby tiene todo resuelto por nosotros! De hecho, ya ha estabas haciendolo cada
 vez que utilizabas iteradores.</p>
 <p>Te mostraré primero un ejemplo rápido, y luego vamos a hablar de ello.</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Array</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Array</span></span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>cadaPar(&amp;fueBloque_ahoraesProc)
     esPar = <span class="hljs-keyword">true</span>  <span class="hljs-comment">#  Empezamos con "true" porque las matrices comienzan con 0</span>
 
@@ -488,13 +497,15 @@ vez que utilizabas iteradores.</p>
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].cadaPar <span class="hljs-keyword">do</span> |bolaImpar|
   puts bolaImpar.to_s+<span class="hljs-string">' NO es un número par!'</span>
 <span class="hljs-keyword">end</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡<span class="hljs-variable">Yum</span><span class="hljs-exclamation_mark">!</span> <span class="hljs-variable">Me</span> <span class="hljs-function_or_atom">encantan</span> <span class="hljs-function_or_atom">los</span> <span class="hljs-function_or_atom">pasteles</span> <span class="hljs-function_or_atom">de</span> <span class="hljs-function_or_atom">manzana</span>, ¿<span class="hljs-function_or_atom">no</span>?
-¡<span class="hljs-variable">Yum</span><span class="hljs-exclamation_mark">!</span> <span class="hljs-variable">Me</span> <span class="hljs-function_or_atom">encanta</span> <span class="hljs-function_or_atom">pasteles</span> <span class="hljs-function_or_atom">de</span> <span class="hljs-function_or_atom">cereza</span>, ¿<span class="hljs-function_or_atom">no</span>?
-<span class="hljs-number">1</span> <span class="hljs-variable">NO</span> <span class="hljs-function_or_atom">es</span> <span class="hljs-function_or_atom">un</span> <span class="hljs-function_or_atom">n</span>ú<span class="hljs-function_or_atom">mero</span> <span class="hljs-function_or_atom">par</span><span class="hljs-exclamation_mark">!</span>
-<span class="hljs-number">3</span> <span class="hljs-variable">NO</span> <span class="hljs-function_or_atom">es</span> <span class="hljs-function_or_atom">un</span> <span class="hljs-function_or_atom">n</span>ú<span class="hljs-function_or_atom">mero</span> <span class="hljs-function_or_atom">par</span><span class="hljs-exclamation_mark">!</span>
-<span class="hljs-number">5</span> <span class="hljs-variable">NO</span> <span class="hljs-function_or_atom">es</span> <span class="hljs-function_or_atom">un</span> <span class="hljs-function_or_atom">n</span>ú<span class="hljs-function_or_atom">mero</span> <span class="hljs-function_or_atom">par</span><span class="hljs-exclamation_mark">!</span>
-</code></pre><p>Así que para pasar un bloque de <code>cadaPar</code> todo lo que tenía que hacer
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Yum! Me encantan los pasteles de manzana, ¿no?
+¡Yum! Me encanta pasteles de cereza, ¿no?
+1 NO es un número par!
+3 NO es un número par!
+5 NO es un número par!
+</code></pre>
+<p>Así que para pasar un bloque de <code>cadaPar</code> todo lo que tenía que hacer
 era pegar el bloque después del método. Puedes pasar un bloque
 dentro de cualquier método de esta manera, aunque muchos métodos simplemente
 ignorarán el bloque. Con el fin de hacer que tu método <em>no</em> ignore el bloque
@@ -516,38 +527,40 @@ método que toma la hora antes de ejecutar el código, ejecuta y luego toma la h
 al final para obtener la diferencia. No puedo encontrar el código en este momento,
 pero no lo necesito, ya que probablemente fue algo como esto:</p>
 <p><em>Código:</em></p>
-<pre><code>def profile descripcionDeBloque, &amp;bloque
-  inicioHora = Time.now
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>profile descripcionDeBloque, &amp;bloque
+  inicioHora = <span class="hljs-constant">Time</span>.now
 
   bloque.call
 
-  duracion = Time.now - inicioHora
+  duracion = <span class="hljs-constant">Time</span>.now - inicioHora
 
   puts descripcionDeBloque+<span class="hljs-string">':  '</span>+duracion.to_s+<span class="hljs-string">' segundos'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
-profile <span class="hljs-string">'25000 duplicaciones'</span> <span class="hljs-built_in">do</span>
+profile <span class="hljs-string">'25000 duplicaciones'</span> <span class="hljs-keyword">do</span>
   numero = <span class="hljs-number">1</span>
 
-  <span class="hljs-number">25000.</span>times <span class="hljs-built_in">do</span>
+  <span class="hljs-number">25000</span>.times <span class="hljs-keyword">do</span>
     numero = numero + numero
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
 
-  puts numero.to_s.<span class="hljs-built_in">length</span>.to_s+<span class="hljs-string">' digitos'</span>  <span class="hljs-comment">#  El numero de digitos en este numero ENORME.</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  puts numero.to_s.length.to_s+<span class="hljs-string">' digitos'</span>  <span class="hljs-comment">#  El numero de digitos en este numero ENORME.</span>
+<span class="hljs-keyword">end</span>
 
-profile <span class="hljs-string">'contar hasta un millon'</span> <span class="hljs-built_in">do</span>
+profile <span class="hljs-string">'contar hasta un millon'</span> <span class="hljs-keyword">do</span>
   numero = <span class="hljs-number">0</span>
 
-  <span class="hljs-number">1000000.</span>times <span class="hljs-built_in">do</span>
+  <span class="hljs-number">1000000</span>.times <span class="hljs-keyword">do</span>
     numero = numero + <span class="hljs-number">1</span>
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>7526 digitos
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">7526 digitos
 25000 duplicaciones:  0.246768 segundos
 contar hasta un millon:  0.90245 segundos
-</code></pre><p>¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
+</code></pre>
+<p>¡Qué sencillo! Qué elegante! Con ese pequeño método puedo fácilmente saber
 cuanto tiempo demora parte de cualquier programa que quiero, solo ejecuto el
 código en un bloque y se lo envió a <code>profile</code>. ¿Qué podría ser más sencillo? En
 la mayoría de los lenguajes, yo tendría que añadir explícitamente el código
@@ -608,7 +621,7 @@ dónde encontrar las cosas que habías olvidado, lo estás haciendo muy bien.
 Porque lo hice. Yo también recibí un montón de ayuda con el código de los ejemplos
 de este tutorial. Pero, ¿dónde estaba <em>yo</em> buscando estas cosas y donde <em>yo</em> pido
 ayuda?.</p>
-<p><a href="/capitulos/11-despues-de-esta-guia.html">Te voy a enseñar...</a></p>
+<p><a href="/aprende.a.programar/capitulos/fin.html">Te voy a enseñar...</a></p>
 
                     
                     </section>

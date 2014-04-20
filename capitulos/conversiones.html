@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="4" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="4" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -237,20 +237,22 @@ usar mi lenguaje de programación favorito: _Ruby_.">
                     <section class="normal" id="section-gitbook_6">
                     
                         <h1 id="conversiones">Conversiones</h1>
-<p>Hemos revisado distintos tipos de objetos (<a href="/capitulos/01-numeros.md#n%C3%BAmeros">números</a>
-y <a href="/capitulos/02-textos.md#textos">textos</a>)
-y hemos hecho que <a href="/capitulos/03-variables.md#variables">variables</a>
+<p>Hemos revisado distintos tipos de objetos (<a href="/aprende.a.programar/capitulos/numeros.html">números</a>
+y <a href="/aprende.a.programar/capitulos/textos.html">textos</a>)
+y hemos hecho que <a href="/aprende.a.programar/capitulos/variables.html">variables</a>
 apunten a ellos; lo que queremos hacer después es que funcionen todos juntos.</p>
 <p>Hemos visto que si queremos que un programa imprima <code>25</code>, lo que sigue <strong><em>no</em></strong>
 funciona, porque no puedes sumar números y texto:</p>
 <p><em>Código:</em></p>
-<pre><code>var1 = <span class="hljs-number">2</span>
+<pre><code class="lang-ruby">var1 = <span class="hljs-number">2</span>
 var2 = <span class="hljs-string">'5'</span>
 
-<span class="hljs-built_in">puts</span> var1 + var2
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>in <span class="hljs-smartquote">`+'</span>: String can't be coerced into Fixnum (TypeError)
-</code></pre><p>Parte del problema es que tu computadora no sabe si estabas tratando de obtener <code>7</code>
+puts var1 + var2
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">in `+&#39;: String can&#39;t be coerced into Fixnum (TypeError)
+</code></pre>
+<p>Parte del problema es que tu computadora no sabe si estabas tratando de obtener <code>7</code>
 (<code>2 + 5</code>) o si querías obtener <code>&#39;25&#39;</code> (<code>&#39;2&#39; + &#39;5&#39;</code>).</p>
 <p>Antes de poderlos sumar, necesitamos alguna forma de conseguir la representación
 textual (en &#39;letras&#39;) de <code>var1</code>, o la representación numérica de <code>var2</code>.</p>
@@ -258,31 +260,35 @@ textual (en &#39;letras&#39;) de <code>var1</code>, o la representación numéri
 <p>Para obtener la representación en texto de un objeto, simplemente escribiendo <code>.to_s</code>
 después de el objeto:</p>
 <p><em>Código:</em></p>
-<pre><code>var1 = <span class="hljs-number">2</span>
+<pre><code class="lang-ruby">var1 = <span class="hljs-number">2</span>
 var2 = <span class="hljs-string">'5'</span>
 
-puts var1<span class="hljs-preprocessor">.to</span>_s + var2
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>25
-</code></pre><p>De la misma manera, <code>to_i</code> devuelve la versión numérica entera de un objeto y <code>to_f</code>
+puts var1.to_s + var2
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">25
+</code></pre>
+<p>De la misma manera, <code>to_i</code> devuelve la versión numérica entera de un objeto y <code>to_f</code>
 devuelve la versión de punto flotante, o sea la que lleva decimales. Veamos que hacen
 estos tres métodos (y lo que <em>no</em> hacen) un poco más de cerca:</p>
 <p><em>Código:</em></p>
-<pre><code>var1 = <span class="hljs-number">2</span>
+<pre><code class="lang-ruby">var1 = <span class="hljs-number">2</span>
 var2 = <span class="hljs-string">'5'</span>
 
-puts var1<span class="hljs-preprocessor">.to</span>_s + var2
-puts var1 + var2<span class="hljs-preprocessor">.to</span>_i
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>25
+puts var1.to_s + var2
+puts var1 + var2.to_i
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">25
 7
-</code></pre><p>Nota que, inclusive después de que obtuvimos la versión en texto de <code>var1</code> al llamar
+</code></pre>
+<p>Nota que, inclusive después de que obtuvimos la versión en texto de <code>var1</code> al llamar
 <code>to_s</code>, <code>var1</code> siempre apuntó a <code>2</code>, y nunca a <code>&#39;2&#39;</code>. A menos que reasignes
 explícitamente <code>var1</code> (lo que requiere de un signo <code>=</code>), apuntará a <code>2</code> durante la
 duración del programa.</p>
 <p>Ahora probemos conversiones más interesantes (y un poco raras):</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'15'</span>.to_f
+<pre><code class="lang-ruby">puts <span class="hljs-string">'15'</span>.to_f
 puts <span class="hljs-string">'99.999'</span>.to_f
 puts <span class="hljs-string">'99.999'</span>.to_i
 puts <span class="hljs-string">'5 es mi numero favorito.'</span>.to_i
@@ -290,8 +296,9 @@ puts <span class="hljs-string">'¿Quién pregunta acerca de 5 o lo que sea?'</sp
 puts <span class="hljs-string">'Tu mamá hizo.'</span>.to_f
 puts <span class="hljs-string">'fibroso'</span>.to_s
 puts <span class="hljs-number">3</span>.to_i
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>15.0
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">15.0
 99.999
 99
 5
@@ -299,7 +306,8 @@ puts <span class="hljs-number">3</span>.to_i
 0.0
 fibroso
 3
-</code></pre><p>Ésto probablemente te ha sorprendido un poco. El primero es bastante estándar,
+</code></pre>
+<p>Ésto probablemente te ha sorprendido un poco. El primero es bastante estándar,
 devolviendo <code>15.0</code>. Después de eso, convertimos el texto <code>&#39;99.999&#39;</code> a un número de
 punto flotante y a un entero. El primero hizo lo que esperábamos; el entero fue,
 como siempre, redondeado hacia abajo.</p>
@@ -311,14 +319,16 @@ fueron ignorados completamente... así que la computadora simplemente elige usar
 esperábamos.</p>
 <p>Hay algo extraño en nuestro método favorito... Mira esto:</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-number">20</span>
+<pre><code class="lang-ruby">puts <span class="hljs-number">20</span>
 puts <span class="hljs-number">20</span>.to_s
 puts <span class="hljs-string">'20'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>20
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">20
 20
 20
-</code></pre><p>¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
+</code></pre>
+<p>¿Por qué estas tres líneas retornan el mismo resultado? Bueno, las últimas dos deberían,
 ya que <code>20.to_s</code> <em>es</em> <code>&#39;20&#39;</code>. Pero, ¿qué pasa con la primera, el entero <code>20</code>? Para tal
 caso, ¿qué significa escribir <em>el entero</em> 20? Cuando escribes <em>2</em> y luego <em>0</em> en un
 papel, estas escribiendo texto, no un entero. <em>El entero</em> 20 es el número de dedos
@@ -341,41 +351,47 @@ escribir todo tipo de programas divertidos ...</p>
 todo funciona bien. Lo que realmente pasa es que <code>gets</code> simplemente
 lee todo lo que tipeas hasta que presionas <code>Enter</code>. Intentémoslo:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-built_in">puts</span> gets
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-emphasis">*¿Hay eco aquí?*</span>
+<pre><code class="lang-ruby">puts gets
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">*¿Hay eco aquí?*
 ¿Hay eco aquí?
-</code></pre><p>Por supuesto, lo que sea que escribas simplemente será impreso en pantalla por ti.
+</code></pre>
+<p>Por supuesto, lo que sea que escribas simplemente será impreso en pantalla por ti.
 Ejecútalo unas cuantas veces e intenta escribir cosas distintas.</p>
 <p>¡Ahora podemos escribir programas interactivos! En este caso, escribe tu
 nombre y te saludará:</p>
-<pre><code>puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
 name = gets
 puts <span class="hljs-string">'¿Tu nombre es '</span> + name + <span class="hljs-string">'?  ¡Es un nombre adorable!'</span>
 puts <span class="hljs-string">'Encantado de conocerte, '</span> + name + <span class="hljs-string">'.  :)'</span>
-</code></pre><p><em>Uhm!</em> Acabo de ejecutarlo, escribí mi nombre y esto es lo que he obtenido:</p>
-<pre><code>Hola, ¿cuál es tu nombre?
-<span class="hljs-strong">*Chris*</span>
+</code></pre>
+<p><em>Uhm!</em> Acabo de ejecutarlo, escribí mi nombre y esto es lo que he obtenido:</p>
+<pre><code class="lang-html">Hola, ¿cuál es tu nombre?
+*Chris*
 ¿Tu nombre es Chris
 ?  ¡Es un nombre adorable!
 Encantado de conocerte, Chris
-<span class="hljs-bullet">.  </span>:)
-</code></pre><p>Hmmm... parece que cuando escribí las letras <em>C</em>, <em>h</em>, <em>r</em>, <em>i</em>, <em>s</em>, y luego presioné
+.  :)
+</code></pre>
+<p>Hmmm... parece que cuando escribí las letras <em>C</em>, <em>h</em>, <em>r</em>, <em>i</em>, <em>s</em>, y luego presioné
 <code>Enter</code>, <code>gets</code> recibió todas las letras de mi nombre <em>y</em> el <code>Enter</code>! Afortunadamente,
 hay un método para este tipo de cosas: <code>chomp</code>. Ésto elimina cualquier <code>Enter</code>
 al final del texto. Intentémoslo de nuevo, pero con <code>chomp</code> para
 que nos ayude:</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
-name = gets.<span class="hljs-keyword">chomp</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Hola, ¿cuál es tu nombre?'</span>
+name = gets.chomp
 puts <span class="hljs-string">'¿Tu nombre es '</span> + name + <span class="hljs-string">'?  ¡Es un nombre adorable!'</span>
 puts <span class="hljs-string">'Encantado de conocerte, '</span> + name + <span class="hljs-string">'.  :)'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-tag">Hola</span>, ¿<span class="hljs-tag">cu</span>á<span class="hljs-tag">l</span> <span class="hljs-tag">es</span> <span class="hljs-tag">tu</span> <span class="hljs-tag">nombre</span>?
-<span class="hljs-tag">Chris</span>
-¿<span class="hljs-tag">Tu</span> <span class="hljs-tag">nombre</span> <span class="hljs-tag">es</span> <span class="hljs-tag">Chris</span>?  ¡<span class="hljs-tag">Es</span> <span class="hljs-tag">un</span> <span class="hljs-tag">nombre</span> <span class="hljs-tag">adorable</span>!
-<span class="hljs-tag">Encantado</span> <span class="hljs-tag">de</span> <span class="hljs-tag">conocerte</span>, <span class="hljs-tag">Chris</span>.  <span class="hljs-pseudo">:)</span>
-</code></pre><p>¡Mucho mejor! Nota que ya que <code>name</code> apunta a <code>gets.chomp</code>, no tenemos que usar
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Hola, ¿cuál es tu nombre?
+Chris
+¿Tu nombre es Chris?  ¡Es un nombre adorable!
+Encantado de conocerte, Chris.  :)
+</code></pre>
+<p>¡Mucho mejor! Nota que ya que <code>name</code> apunta a <code>gets.chomp</code>, no tenemos que usar
 <code>name.chomp</code>; <code>name</code> ya fue procesado por `chomp.</p>
 <h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
 <ul>

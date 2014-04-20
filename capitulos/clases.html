@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="9" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="9" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -244,18 +244,20 @@ En Ruby, estas clases están siempre en mayúsculas: <code>String</code>, <code>
 <code>Float</code>, <code>Array</code> ... etc. En general, si queremos crear un nuevo
 objeto de una cierta clase, usamos <code>new</code>:</p>
 <p><em>Código:</em></p>
-<pre><code>a = <span class="hljs-keyword">Array</span>.<span class="hljs-keyword">new</span>  + [<span class="hljs-number">12345</span>]  #  <span class="hljs-keyword">Array</span>  agregado.
-b = <span class="hljs-typename">String</span>.<span class="hljs-keyword">new</span> + <span class="hljs-attribute">'hello</span>'  #  <span class="hljs-typename">String</span> agregado.
-c = <span class="hljs-typename">Time</span>.<span class="hljs-keyword">new</span>
+<pre><code class="lang-ruby">a = <span class="hljs-constant">Array</span>.new  + [<span class="hljs-number">12345</span>]  <span class="hljs-comment">#  Array  agregado.</span>
+b = <span class="hljs-constant">String</span>.new + <span class="hljs-string">'hello'</span>  <span class="hljs-comment">#  String agregado.</span>
+c = <span class="hljs-constant">Time</span>.new
 
-puts <span class="hljs-attribute">'a</span> = '+a.to_s
-puts <span class="hljs-attribute">'b</span> = '+b.to_s
-puts <span class="hljs-attribute">'c</span> = '+c.to_s
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-setting">a = <span class="hljs-value">[<span class="hljs-number">12345</span>]</span></span>
-<span class="hljs-setting">b = <span class="hljs-value">hello</span></span>
-<span class="hljs-setting">c = <span class="hljs-value"><span class="hljs-number">2012</span>-<span class="hljs-number">06</span>-<span class="hljs-number">01</span> <span class="hljs-number">12</span>:<span class="hljs-number">52</span>:<span class="hljs-number">06</span> -<span class="hljs-number">0500</span></span></span>
-</code></pre><p>Porque podemos crear matrices y textos usando  <code>[...]</code> y <code>&#39; ... &#39;</code>
+puts <span class="hljs-string">'a = '</span>+a.to_s
+puts <span class="hljs-string">'b = '</span>+b.to_s
+puts <span class="hljs-string">'c = '</span>+c.to_s
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">a = [12345]
+b = hello
+c = 2012-06-01 12:52:06 -0500
+</code></pre>
+<p>Porque podemos crear matrices y textos usando  <code>[...]</code> y <code>&#39; ... &#39;</code>
 respectivamente es que rara vez los creamos usando <code>new</code>. (Aunque
 no es muy evidente en el ejemplo anterior, <code>String.new</code> crea una
 cadena vacía y <code>Array.new</code> crea una matriz vacía) También, los
@@ -267,22 +269,26 @@ representan momentos en el tiempo. Usted puede sumar (o restar) números a
 (o desde) para obtener los nuevos tiempos: la adición de <code>1.5</code>
 a un tiempo hace un tiempo nuevo segundo y medio más tarde:</p>
 <p><em>Código:</em></p>
-<pre><code>hora  = Time.<span class="hljs-keyword">new</span>   <span class="hljs-preprocessor">#  El momento que se ejecutó esta código</span>
-hora2 = hora + <span class="hljs-number">60</span>  <span class="hljs-preprocessor">#  Un minuto más tarde.</span>
+<pre><code class="lang-ruby">hora  = <span class="hljs-constant">Time</span>.new   <span class="hljs-comment">#  El momento que se ejecutó esta código</span>
+hora2 = hora + <span class="hljs-number">60</span>  <span class="hljs-comment">#  Un minuto más tarde.</span>
 
-<span class="hljs-built_in">puts</span> hora
-<span class="hljs-built_in">puts</span> hora2
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>2012<span class="hljs-tag">-06-01</span> 12<span class="hljs-pseudo">:55</span><span class="hljs-pseudo">:49</span> <span class="hljs-tag">-0500</span>
-2012<span class="hljs-tag">-06-01</span> 12<span class="hljs-pseudo">:56</span><span class="hljs-pseudo">:49</span> <span class="hljs-tag">-0500</span>
-</code></pre><p>También puedes obtener el tiempo para un momento específico utilizando <code>Time.mktime</code>:</p>
+puts hora
+puts hora2
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">2012-06-01 12:55:49 -0500
+2012-06-01 12:56:49 -0500
+</code></pre>
+<p>También puedes obtener el tiempo para un momento específico utilizando <code>Time.mktime</code>:</p>
 <p><em>Código:</em></p>
-<pre><code>puts Time<span class="hljs-preprocessor">.mktime</span>(<span class="hljs-number">2000</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)          <span class="hljs-preprocessor">#  Y2K.</span>
-puts Time<span class="hljs-preprocessor">.mktime</span>(<span class="hljs-number">1976</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>)  <span class="hljs-preprocessor">#  Cuando nació Chris.</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>2000<span class="hljs-tag">-01-01</span> 00<span class="hljs-pseudo">:00</span><span class="hljs-pseudo">:00</span> <span class="hljs-tag">-0500</span>
-1976<span class="hljs-tag">-08-03</span> 10<span class="hljs-pseudo">:11</span><span class="hljs-pseudo">:00</span> <span class="hljs-tag">-0500</span>
-</code></pre><p>Nota: yo nací en el horario de verano del Pacífico (PDT).
+<pre><code class="lang-ruby">puts <span class="hljs-constant">Time</span>.mktime(<span class="hljs-number">2000</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)          <span class="hljs-comment">#  Y2K.</span>
+puts <span class="hljs-constant">Time</span>.mktime(<span class="hljs-number">1976</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>)  <span class="hljs-comment">#  Cuando nació Chris.</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">2000-01-01 00:00:00 -0500
+1976-08-03 10:11:00 -0500
+</code></pre>
+<p>Nota: yo nací en el horario de verano del Pacífico (PDT).
 Cuando se presentó el problema del año 2000, sin embargo, era hora
 estándar del Pacífico (PST), por lo menos para nosotros los de la
 Costa Oeste. Los paréntesis son para agrupar los parámetros a <code>mktime</code>.
@@ -311,7 +317,7 @@ hashes cuando se tiene un montón de cosas que no se desea perder de vista,
 pero que en realidad no encajan en una lista ordenada. Por ejemplo los colores que
 yo uso para las diferentes partes del código con las que he creado este tutorial:</p>
 <p><em>Código:</em></p>
-<pre><code>colorArray = []  <span class="hljs-comment">#  igual a Array.new</span>
+<pre><code class="lang-ruby">colorArray = []  <span class="hljs-comment">#  igual a Array.new</span>
 colorHash  = {}  <span class="hljs-comment">#  igual a Hash.new</span>
 
 colorArray[<span class="hljs-number">0</span>]         = <span class="hljs-string">'#FF0000'</span>
@@ -321,20 +327,22 @@ colorHash[<span class="hljs-string">'textos '</span>]  = <span class="hljs-strin
 colorHash[<span class="hljs-string">'numeros'</span>]  = <span class="hljs-string">'#008000'</span>   <span class="hljs-comment"># verde</span>
 colorHash[<span class="hljs-string">'claves '</span>]  = <span class="hljs-string">'#0000FF'</span>   <span class="hljs-comment"># azul</span>
 
-colorArray.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |color|
+colorArray.each <span class="hljs-keyword">do</span> |color|
   puts color
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
-colorHash.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |tipoCodigo, color|
+<span class="hljs-keyword">end</span>
+colorHash.each <span class="hljs-keyword">do</span> |tipoCodigo, color|
   puts tipoCodigo + <span class="hljs-string">' :  '</span> + color
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-comment">#FF0000</span>
-<span class="hljs-comment">#008000</span>
-<span class="hljs-comment">#0000FF</span>
-textos  :  <span class="hljs-comment">#FF0000</span>
-numeros :  <span class="hljs-comment">#008000</span>
-claves  :  <span class="hljs-comment">#0000FF</span>
-</code></pre><p>Si utilizo una matriz, tengo que recordar que la ranura <code>0</code> es para los textos,
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">#FF0000
+#008000
+#0000FF
+textos  :  #FF0000
+numeros :  #008000
+claves  :  #0000FF
+</code></pre>
+<p>Si utilizo una matriz, tengo que recordar que la ranura <code>0</code> es para los textos,
 la ranura <code>1</code> es para los números, etc, pero si puedo usar un hash, ¡es muy fácil!
 Ranura <code>&#39; textos &#39;</code> mantiene el color de las cadenas, por supuesto. No hay
 nada que recordar. Puedes haber notado que cuando se utiliza <code>each</code>
@@ -344,12 +352,13 @@ Matrices son para mantener las cosas en orden, no hashes.</p>
 <p>Aunque la gente suele utilizar textos para nombrar las ranuras de un hash, se
 puede utilizar cualquier tipo de objeto, incluso las matrices y los hashes de
 otros (aunque yo no puedo pensar en por qué querría hacer esto ...):</p>
-<pre><code>weirdHash = Hash.new
+<pre><code class="lang-ruby">weirdHash = <span class="hljs-constant">Hash</span>.new
 
 weirdHash[<span class="hljs-number">12</span>] = <span class="hljs-string">'monos'</span>
-weirdHash<span class="hljs-string">[[]]</span> = <span class="hljs-string">'el vacío'</span>
-weirdHash[Time.new] = <span class="hljs-string">'ningun momento como el actual'</span>
-</code></pre><p>Hashes y matrices son buenos para cosas diferentes, depende de ti decidir cuál
+weirdHash[[]] = <span class="hljs-string">'el vacío'</span>
+weirdHash[<span class="hljs-constant">Time</span>.new] = <span class="hljs-string">'ningun momento como el actual'</span>
+</code></pre>
+<p>Hashes y matrices son buenos para cosas diferentes, depende de ti decidir cuál
 es el mejor para un problema particular.</p>
 <h2 id="extendiendo-las-clases">Extendiendo las clases</h2>
 <p>Al final del último capítulo escribiste un método para decir la frase en español
@@ -357,7 +366,7 @@ de un número entero. No era un método de número entero, sin embargo;
 fue sólo un método genérico de un &quot;programa&quot;. ¿No sería agradable si pudieras
 escribir algo como <code>22.to_esp</code> en lugar de <code>numeroEspanol  22</code>?. He aquí cómo harías eso:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Integer</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Integer</span></span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>to_esp
     <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span> == <span class="hljs-number">5</span>
       espanol = <span class="hljs-string">'cinco'</span>
@@ -372,10 +381,12 @@ escribir algo como <code>22.to_esp</code> en lugar de <code>numeroEspanol  22</c
 <span class="hljs-comment">#  Mejor probarlo en un par de números...</span>
 puts <span class="hljs-number">5</span>.to_esp
 puts <span class="hljs-number">58</span>.to_esp
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>cinco
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">cinco
 cincuenta y ocho
-</code></pre><p>Bueno, lo he probado y parece que funciona. ;)</p>
+</code></pre>
+<p>Bueno, lo he probado y parece que funciona. ;)</p>
 <p>Por lo tanto, definimos un método del número entero ingresando en la clase <code>Integer</code>,
 definiendo el método allí y saliendo luego. Ahora todos los números enteros tienen
 este (algo incompleto) método. De hecho, si no te gusta la forma en que el método
@@ -396,25 +407,27 @@ creación de una nueva clase es tan fácil como la ampliación de una antigua.
 Digamos que hemos querido hacer algunos dados en Ruby. Así es como podemos
 hacer la clase Dado:</p>
 <p><em>Código:</em></p>
-<pre><code>class Dado
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
 
-  def roll
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>roll
     <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
-  <span class="hljs-function"><span class="hljs-keyword">end</span></span>
+  <span class="hljs-keyword">end</span>
 
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 <span class="hljs-comment">#  Vamos a crear un par de dados...</span>
-dados = [Dado.<span class="hljs-built_in">new</span>, Dado.<span class="hljs-built_in">new</span>]
+dados = [<span class="hljs-constant">Dado</span>.new, <span class="hljs-constant">Dado</span>.new]
 
 <span class="hljs-comment">#  ...y hacerlos rodar.</span>
-dados.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |dado|
+dados.each <span class="hljs-keyword">do</span> |dado|
   puts dado.roll
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>3
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
 4
-</code></pre><p>(Si se ha saltado la sección de números aleatorios,  <code>rand(6)</code>
+</code></pre>
+<p>(Si se ha saltado la sección de números aleatorios,  <code>rand(6)</code>
 sólo da un número aleatorio entre  0 y 5 .)
 ¡Y eso es todo! Nuestro propios objetos. Tira los dados
 un par de veces (con el botón de recarga) y mira lo que
@@ -443,7 +456,7 @@ variables de instancia de un objeto, por otro lado, duran tanto como el objeto.
 Para diferenciar las variables de instancia de las variables locales,
 ellos tienen <code>@</code> delante de sus nombres:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>rodar
     <span class="hljs-variable">@numeroMostrado</span> = <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
@@ -462,16 +475,18 @@ puts dado.mostrar
 dado.rodar
 puts dado.mostrar
 puts dado.mostrar
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>1
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">1
 1
 5
 5
-</code></pre><p>¡Muy bien!. <code>rodar</code> rueda el dado y <code>mostrar</code> nos dice el número que muestra.
+</code></pre>
+<p>¡Muy bien!. <code>rodar</code> rueda el dado y <code>mostrar</code> nos dice el número que muestra.
 Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el dado
 (antes de que lo hayamos guardado en <code>@numeroMostrado</code>)</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>rodar
     <span class="hljs-variable">@nummeroMostrado</span> = <span class="hljs-number">1</span> + rand(<span class="hljs-number">6</span>)
@@ -486,14 +501,16 @@ Sin embargo, que pasa si tratamos de mostrar lo que existía antes de rodar el d
 <span class="hljs-comment"># Ya que no voy a usar este dado de nuevo,</span>
 <span class="hljs-comment"># No es necesario guardarlo en una variable.</span>
 puts <span class="hljs-constant">Dado</span>.new.mostrar
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-keyword">nil</span>
-</code></pre><p>Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">nil
+</code></pre>
+<p>Hmmm ... bueno, al menos no nos muestra un error. Aún así, no tiene mucho
 sentido para un dado &quot;no rodado&quot; mostrar <code>nil</code> o lo que sea que se supone
 que significa. Sería bueno si pudiéramos dar un valor cuando nuestro objeto
 Dado es creado. Para esto esta <code>initialize</code>:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dado</span></span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
     <span class="hljs-comment"># Voy a tirar el dado, a pesar de que</span>
@@ -512,9 +529,11 @@ Dado es creado. Para esto esta <code>initialize</code>:</p>
 <span class="hljs-keyword">end</span>
 
 puts <span class="hljs-constant">Dado</span>.new.mostrar
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>6
-</code></pre><p>Cuando se crea un objeto, su método <code>initialize</code> (si se ha definido
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">6
+</code></pre>
+<p>Cuando se crea un objeto, su método <code>initialize</code> (si se ha definido
 uno) siempre es llamado.
 Nuestros dados son casi perfectos. La única cosa que podría hacer falta
 es una manera de decirle que lado del dado debe mostrar... ¿Por
@@ -535,7 +554,7 @@ interactuar con nuestro dragón bebé y cuando nace le daremos un nombre.
 (Lo que sea que pasen al método <code>new</code> al método <code>initialize</code>).
 Muy bien, continuemos:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dragon</span></span>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dragon</span></span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize nombre
     <span class="hljs-variable">@nombre</span> = nombre
@@ -657,34 +676,36 @@ mascota.dormir
 mascota.dormir
 mascota.dormir
 mascota.dormir
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Norbert nace.
-Alimentas <span class="hljs-operator">a</span> Norbert.
-Lanzas <span class="hljs-operator">a</span> Norbert en el aire.
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Norbert nace.
+Alimentas a Norbert.
+Lanzas a Norbert en el aire.
 Sonrie, sus cejas se mueven.
-Haces caminar <span class="hljs-operator">a</span> Norbert.
-Colocas <span class="hljs-operator">a</span> Norbert en la cama.
+Haces caminar a Norbert.
+Colocas a Norbert en la cama.
 Norbert ronca, llenando el cuarto con humo.
 Norbert ronca, llenando el cuarto con humo.
 Norbert ronca, llenando el cuarto con humo.
 Norbert despierta lentamente.
-Acunas <span class="hljs-operator">a</span> Norbert suavemente.
+Acunas a Norbert suavemente.
 Rapidamente se queda dormido...
 ...pero despierta cuando te detienes.
-Colocas <span class="hljs-operator">a</span> Norbert en la cama.
+Colocas a Norbert en la cama.
 ¡Se despierta de repente!
 El estomago de Norbertretumba...
-Colocas <span class="hljs-operator">a</span> Norbert en la cama.
+Colocas a Norbert en la cama.
 ¡Se despierta de repente!
 El estomago de Norbertretumba...
-Colocas <span class="hljs-operator">a</span> Norbert en la cama.
+Colocas a Norbert en la cama.
 ¡Se despierta de repente!
 El estomago de Norbertretumba...
 Norbert hace la danza del baño...
-Colocas <span class="hljs-operator">a</span> Norbert en la cama.
+Colocas a Norbert en la cama.
 ¡Se despierta de repente!
 ¡Norbert esta hambriento!  En su desesperacion, ¡te COMIO!
-</code></pre><p><em>¡Ouau!</em> Por supuesto, sería mejor si fuese un programa interactivo,
+</code></pre>
+<p><em>¡Ouau!</em> Por supuesto, sería mejor si fuese un programa interactivo,
 pero puedes modificarlo. Yo sólo estaba tratando de mostrarte las partes
 relacionadas directamente con la creación de una nueva clase de dragón.</p>
 <p>Vimos algunas cosas nuevas en ese ejemplo. La primera es simple: <code>exit</code>

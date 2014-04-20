@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="7" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="7" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -253,20 +253,21 @@ necesitamos son <em>matrices</em>.</p>
 la lista actúa como una variable: puedes ver que objeto en
 particular apunta a cada posición, y puedes hacer que este apunte
 a un objeto diferente. Vamos a echar un vistazo a algunas matrices:</p>
-<pre><code>[]
+<pre><code class="lang-ruby">[]
 [<span class="hljs-number">5</span>]
 [<span class="hljs-string">'Hola'</span>, <span class="hljs-string">'Adiós'</span>]
 
 flavor = <span class="hljs-string">'vainilla'</span>           <span class="hljs-comment">#  Esto no es una matriz, por supuesto...</span>
-[<span class="hljs-number">89.9</span>, sabor, [<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>]]  <span class="hljs-comment">#  ...pero esto sí lo es.</span>
-</code></pre><p>Entonces primero tenemos una matriz vacía, luego una matriz
+[<span class="hljs-number">89.9</span>, flavor, [<span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>]]  <span class="hljs-comment">#  ...pero esto sí lo es.</span>
+</code></pre>
+<p>Entonces primero tenemos una matriz vacía, luego una matriz
 conteniendo un número simple, luego una matriz que contiene
 dos textos. Siguiendo, tenemos una simple asignación, luego
 un array conteniendo tres objetos, de los cuales el último
 es la matriz <code>&#39;[true, false]&#39;</code>. Recuerda, variables
 no son objetos, entonces nuestra ultima matriz es en realidad
 un flotante, un <em>texto</em>, y una matriz. Aún asi si
-nosotros hubieramos puesto <code>&#39;sabor&#39;</code> a punto o algo más,
+nosotros hubieramos puesto <code>&#39;flavor&#39;</code> a punto o algo más,
 esto no hubiera cambiado la matriz.</p>
 <p>Para ayudarnos a encontrar un objeto particular en una matriz,
 cada posición es dada por un índice numérico. Programadores
@@ -275,21 +276,23 @@ contando desde cero, por lo que la primera posicion del array
 es cero. Aquí es como nosotros deberíamos referenciar los
 objetos en una matriz:</p>
 <p><em>Código:</em></p>
-<pre><code>names = [<span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Belle'</span>, <span class="hljs-string">'Chris'</span>]
+<pre><code class="lang-ruby">names = [<span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Belle'</span>, <span class="hljs-string">'Chris'</span>]
 
 puts names
 puts names[<span class="hljs-number">0</span>]
 puts names[<span class="hljs-number">1</span>]
 puts names[<span class="hljs-number">2</span>]
 puts names[<span class="hljs-number">3</span>]  <span class="hljs-comment">#  Este esta fuera del rango.</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>    Ada
-    Belle
-    Chris
-    Ada
-    Belle
-    Chris
-</code></pre><p>Entonces, nosotros vemos que <code>&#39;puts names&#39;</code> imprime
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Ada
+Belle
+Chris
+Ada
+Belle
+Chris
+</code></pre>
+<p>Entonces, nosotros vemos que <code>&#39;puts names&#39;</code> imprime
 cada nombre en la matriz <code>&#39;names&#39;</code>. Luego usamos
 <code>&#39;puts names[0]&#39;</code> para imprimir el &quot;primer&quot; nombre en
 la matriz, y <code>&#39;puts names[1]&#39;</code> para imprimir el &quot;segundo&quot;
@@ -325,25 +328,27 @@ a <em>cada</em> objeto que apunte. Asi, si queremos decir algo
 bueno acerca de cada lenguaje en la matriz de abajo, podriamos hacer
 esto:</p>
 <p><em>Código:</em></p>
-<pre><code>lenguajes = [<span class="hljs-string">'Inglés'</span>, <span class="hljs-string">'Alemán'</span>, <span class="hljs-string">'Ruby'</span>]
+<pre><code class="lang-ruby">lenguajes = [<span class="hljs-string">'Inglés'</span>, <span class="hljs-string">'Alemán'</span>, <span class="hljs-string">'Ruby'</span>]
 
-lenguajes.<span class="hljs-keyword">each</span> <span class="hljs-built_in">do</span> |leng|
+lenguajes.each <span class="hljs-keyword">do</span> |leng|
   puts <span class="hljs-string">'¡Me gusta '</span> + leng + <span class="hljs-string">'!'</span>
   puts <span class="hljs-string">'¿A ti?'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
+<span class="hljs-keyword">end</span>
 
 puts <span class="hljs-string">'¡Y vamos a escuchar esto para C++!'</span>
 puts <span class="hljs-string">'...'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>¡Me gusta Inglés!
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">¡Me gusta Inglés!
 ¿A tí?
 ¡Me gusta Alemán!
 ¿A tí?
 ¡Me gusta Ruby!
 ¿A tí?
 ¡Y vamos a escuchar esto para C++!
-<span class="hljs-keyword">...</span>
-</code></pre><p>¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
+...
+</code></pre>
+<p>¿Qué acaba de ocurrir? Bueno, tenemos permitido ir a través
 de cada objeto en la matriz sin utilizar ningun número, así
 esto es definitivamente mejor. Traducido al español
 diriamos que: Para cada <code>&#39;each&#39;</code> objeto en <code>&#39;lenguajes&#39;</code>,
@@ -370,14 +375,16 @@ nosotros solo usamos <code>&#39;do&#39;</code> con iteradores</p>
 <p>Aquí hay otro pequeño iterador, pero esto no es un método para <em>matriz</em>... es un método
 para <em>entero</em>!</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-number">3.</span>times <span class="hljs-built_in">do</span>
+<pre><code class="lang-ruby"><span class="hljs-number">3</span>.times <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'Hip-Hip-Hooray!'</span>
-<span class="hljs-function"><span class="hljs-keyword">end</span></span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Hip<span class="hljs-attribute">-Hip</span><span class="hljs-attribute">-Hooray</span><span class="hljs-subst">!</span>
-Hip<span class="hljs-attribute">-Hip</span><span class="hljs-attribute">-Hooray</span><span class="hljs-subst">!</span>
-Hip<span class="hljs-attribute">-Hip</span><span class="hljs-attribute">-Hooray</span><span class="hljs-subst">!</span>
-</code></pre><h2 id="mas-m-todos-para-matrices">Mas métodos para Matrices</h2>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+</code></pre>
+<h2 id="mas-m-todos-para-matrices">Mas métodos para Matrices</h2>
 <p>Entonces hemos aprendido sobre <code>&#39;each&#39;</code>, pero hay muchos métodos
 más... al menos muchos como métodos para matrices. De hecho, algunos de ellos
 (como <code>&#39;length&#39;</code>, <code>&#39;reverse&#39;</code>, <code>&#39;+&#39;</code>, y <code>&#39;*&#39;</code> )
@@ -392,30 +399,32 @@ recurrir a recordar sobre ellos buscando información.</p>
 este agrega un texto entre los objetos de la matriz.
 Vamos a mirar un poco:</p>
 <p><em>Código:</em></p>
-<pre><code>alimentos = [<span class="hljs-string">'artichoke'</span>, <span class="hljs-string">'brioche'</span>, <span class="hljs-string">'caramel'</span>]
+<pre><code class="lang-ruby">alimentos = [<span class="hljs-string">'artichoke'</span>, <span class="hljs-string">'brioche'</span>, <span class="hljs-string">'caramel'</span>]
 
 puts alimentos
 puts
 puts alimentos.to_s
 puts
-puts alimentos.<span class="hljs-keyword">join</span>(<span class="hljs-string">', '</span>)
+puts alimentos.join(<span class="hljs-string">', '</span>)
 puts
-puts alimentos.<span class="hljs-keyword">join</span>(<span class="hljs-string">'  :)  '</span>) + <span class="hljs-string">'  8)'</span>
+puts alimentos.join(<span class="hljs-string">'  :)  '</span>) + <span class="hljs-string">'  8)'</span>
 
-<span class="hljs-number">200</span>.<span class="hljs-keyword">times</span> <span class="hljs-keyword">do</span>
+<span class="hljs-number">200</span>.times <span class="hljs-keyword">do</span>
   puts []
-end
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>artichoke
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">artichoke
 brioche
 caramel
 
-[<span class="hljs-string">"artichoke"</span>, <span class="hljs-string">"brioche"</span>, <span class="hljs-string">"caramel"</span>]
+[&quot;artichoke&quot;, &quot;brioche&quot;, &quot;caramel&quot;]
 
 artichoke, brioche, caramel
 
-artichoke  :)  brioche  :)  caramel  <span class="hljs-number">8</span>)
-</code></pre><p>Como puedes ver, <code>&#39;puts&#39;</code> trata la matriz diferente  a otros objetos:
+artichoke  :)  brioche  :)  caramel  8)
+</code></pre>
+<p>Como puedes ver, <code>&#39;puts&#39;</code> trata la matriz diferente  a otros objetos:
 solo llama <code>&#39;puts&#39;</code> sobre cada uno de los objetos en la matriz.
 Esto es porque <code>&#39;puts&#39;</code> con una matriz vacía 200 veces no hace nada; la
 matriz no apunta a nada; entonces no hay nada para <code>&#39;puts&#39;</code>. (Hacer nada
@@ -432,25 +441,27 @@ y <code>&#39;pop&#39;</code> quita el último objeto desde la matriz (y te dice 
 de la matriz, excepto que este deja la matriz. De nuevo, <code>&#39;push&#39;</code> y <code>&#39;pop&#39;</code>
 en realidad cambian la matriz:</p>
 <p><em>Código:</em></p>
-<pre><code>favoritos = []
-favoritos.<span class="hljs-keyword">push</span> <span class="hljs-string">'lluvia de rosas'</span>
-favoritos.<span class="hljs-keyword">push</span> <span class="hljs-string">'whisky en gatitos'</span>
+<pre><code class="lang-ruby">favoritos = []
+favoritos.push <span class="hljs-string">'lluvia de rosas'</span>
+favoritos.push <span class="hljs-string">'whisky en gatitos'</span>
 
 puts favoritos[<span class="hljs-number">0</span>]
-puts favoritos.<span class="hljs-keyword">last</span>
-puts favoritos.<span class="hljs-keyword">length</span>
+puts favoritos.last
+puts favoritos.length
 
-puts favoritos.<span class="hljs-keyword">pop</span>
+puts favoritos.pop
 puts favoritos
-puts favoritos.<span class="hljs-keyword">length</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>lluvia de rosas
+puts favoritos.length
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">lluvia de rosas
 whisky en gatitos
 2
 whisky en gatitos
 lluvia de rosas
 1
-</code></pre><h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
+</code></pre>
+<h2 id="algunas-cosas-por-intentar">Algunas cosas por intentar</h2>
 <ul>
 <li><p>Escribe el programa del cual hablamos al principio de este capítulo.
 <strong>Consejo:</strong>  Hay un hermoso método para matrices el cual te dará la

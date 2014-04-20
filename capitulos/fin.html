@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="11" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="11" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -308,32 +308,36 @@ cuenta por ti mismo en irb de que se trata.</p>
 <p>Otro lindo atajo que puedes usar con <code>if</code>,
 <code>unless</code> y <code>while</code>, es esta linda versión de una línea:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-comment">#  Estas lineas son de un programa que escribi para generar palabras</span>
-puts <span class="hljs-string">'grobably combergearl kitatently thememberate'</span> <span class="hljs-keyword">if</span> <span class="hljs-number">5</span> == <span class="hljs-number">2</span><span class="hljs-variable">**</span><span class="hljs-number">2</span> + <span class="hljs-number">1</span><span class="hljs-variable">**</span><span class="hljs-number">1</span>
-puts <span class="hljs-string">'enlestrationshifter supposine follutify blace'</span> <span class="hljs-keyword">unless</span> <span class="hljs-string">'Chris'</span>.<span class="hljs-keyword">length</span> == <span class="hljs-number">5</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>grobably combergearl kitatently thememberate
-</code></pre><p>Y finalmente, hay otro camino para escribir métodos la cual toma bloques
+<pre><code class="lang-ruby"><span class="hljs-comment">#  Estas lineas son de un programa que escribi para generar palabras</span>
+puts <span class="hljs-string">'grobably combergearl kitatently thememberate'</span> <span class="hljs-keyword">if</span> <span class="hljs-number">5</span> == <span class="hljs-number">2</span>**<span class="hljs-number">2</span> + <span class="hljs-number">1</span>**<span class="hljs-number">1</span>
+puts <span class="hljs-string">'enlestrationshifter supposine follutify blace'</span> <span class="hljs-keyword">unless</span> <span class="hljs-string">'Chris'</span>.length == <span class="hljs-number">5</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">grobably combergearl kitatently thememberate
+</code></pre>
+<p>Y finalmente, hay otro camino para escribir métodos la cual toma bloques
 (no procs). Vimos la parte donde tomabamos el bloque y lo convertíamos
 dentro de un proc usando el truco <code>&amp;block</code> en la lista de parametros
 cuando defines una función. Entonces, para llamar el bloque, solo usas
 <code>block.call</code>.  Bueno, hay una manera más corta (aunque personalmente pienso que
 es más confuso). En lugar de esto:</p>
 <p><em>Código:</em></p>
-<pre><code>def hacerDosVeces(&amp;<span class="hljs-keyword">block</span>)
-  <span class="hljs-keyword">block</span>.call
-  <span class="hljs-keyword">block</span>.call
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerDosVeces(&amp;block)
+  block.call
+  block.call
 <span class="hljs-keyword">end</span>
 
 hacerDosVeces <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'murditivent flavitemphan siresent litics'</span>
 <span class="hljs-keyword">end</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>murditivent flavitemphan siresent litics
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">murditivent flavitemphan siresent litics
 murditivent flavitemphan siresent litics
-</code></pre><p>...haces esto:</p>
+</code></pre>
+<p>...haces esto:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerDosVeces
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>hacerDosVeces
   <span class="hljs-keyword">yield</span>
   <span class="hljs-keyword">yield</span>
 <span class="hljs-keyword">end</span>
@@ -341,10 +345,12 @@ murditivent flavitemphan siresent litics
 hacerDosVeces <span class="hljs-keyword">do</span>
   puts <span class="hljs-string">'buritiate mustripe lablic acticise'</span>
 <span class="hljs-keyword">end</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>buritiate mustripe lablic acticise
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">buritiate mustripe lablic acticise
 buritiate mustripe lablic acticise
-</code></pre><p>No sé... ¿qué piensas? Quizás solo sea yo, pero... ¡¿<code>yield</code>?!
+</code></pre>
+<p>No sé... ¿qué piensas? Quizás solo sea yo, pero... ¡¿<code>yield</code>?!
 Si esto fue algo como  <code>call_the_hidden_block</code> o otra cosa más,
 esto tendría <em>mucho más</em> sentido para mi. Mucha gente dice que <code>yield</code>
 tiene sentido para ellos. Pero, supongo que es algo como TMTOWTDI (Hay Más De
@@ -353,7 +359,7 @@ y yo lo haré a mi manera.</p>
 <h2 id="fin">Fin</h2>
 <p>Usa esto para lo bueno y no para lo malo. :-)  Y si encuentras este tutorial
 útil (o confuso, o si encuentras un error),
-<a href="https://github.com/rubysur/aprendeaprogramar.pe/issues">avísanos</a>!</p>
+<a href="https://github.com/rubysur/aprende.a.programar/issues" target="_blank">avísanos</a>!</p>
 
                     
                     </section>

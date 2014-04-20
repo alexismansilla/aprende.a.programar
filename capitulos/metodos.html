@@ -39,7 +39,7 @@ usar mi lenguaje de programación favorito: _Ruby_.">
     </head>
     <body>
         
-    <div class="book" data-github="rubysur/aprende.a.programar" data-level="5" data-basepath=".." data-revision="1397788508211">
+    <div class="book" data-github="rubysur/aprende.a.programar" data-level="5" data-basepath=".." data-revision="1398032691819">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -267,12 +267,14 @@ aritméticos. Como resulta, <code>5 + 5</code>  es solo otra forma fácil de
 escribir <code>5.+ 5</code>.
 Por ejemplo:</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'hola '</span>.+ <span class="hljs-string">'mundo'</span>
+<pre><code class="lang-ruby">puts <span class="hljs-string">'hola '</span>.+ <span class="hljs-string">'mundo'</span>
 puts (<span class="hljs-number">10</span>.* <span class="hljs-number">9</span>).+ <span class="hljs-number">9</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>hola mundo
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">hola mundo
 99
-</code></pre><p>Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
+</code></pre>
+<p>Esto no es muy lindo, por lo que no vamos a escribir siempre como ahora;
 sin embargo, es importante para entender que sucede <em>realmente</em>.</p>
 <p>Esto también nos da un profundo entendimiento de porque podemos hacer
 <code>&#39;pig&#39;*5</code> pero no podemos hacer <code>5*&#39;pig&#39;</code>: <code>&#39;pig&#39;*5</code>
@@ -292,13 +294,15 @@ demos cuenta, siempre iremos a estar en un gran objeto que es... ¡el programa e
 embargo en este caso no es posible llamarlo en forma explícita)
 Observa lo siguiente:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-title">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span> = <span class="hljs-number">3</span>
-puts NoPuedoCreerQueUnaVariableC<span class="hljs-built_in">on</span>NombreTanLargoApunteA3
-self.puts NoPuedoCreerQueUnaVariableC<span class="hljs-built_in">on</span>NombreTanLargoApunteA3
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>3
-in <span class="hljs-smartquote">`&lt;main&gt;'</span>: private method <span class="hljs-smartquote">`puts'</span> called for main:Object (NoMethodError)
-</code></pre><p>Si no alcanzaste a comprender todo, está bien. Lo importante es que
+<pre><code class="lang-ruby"><span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span> = <span class="hljs-number">3</span>
+puts <span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span>
+<span class="hljs-keyword">self</span>.puts <span class="hljs-constant">NoPuedoCreerQueUnaVariableConNombreTanLargoApunteA3</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
+in `<span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>': private method `puts' called for main:Object (NoMethodError)
+</code></pre>
+<p>Si no alcanzaste a comprender todo, está bien. Lo importante es que
 todo método está siendo propiedad de un objeto, incluso si no tiene
 un punto enfrente de este. Si entiendes esto estás preparado.</p>
 <h2 id="m-todos-imaginativos-acerca-de-strings">Métodos imaginativos acerca de Strings</h2>
@@ -318,49 +322,55 @@ que conocer que hay en éste?</p>
 <p>Entonces, nuestro primer método para texto es <code>reverse</code>,
 el cual nos da una version invertida de un texto:</p>
 <p><em>Código:</em></p>
-<pre><code>var1 = <span class="hljs-string">'parar'</span>
+<pre><code class="lang-ruby">var1 = <span class="hljs-string">'parar'</span>
 var2 = <span class="hljs-string">'subrayado'</span>
 var3 = <span class="hljs-string">'Puedes pronunciar esta oración al reves?'</span>
 
-puts var1.<span class="hljs-keyword">reverse</span>
-puts var2.<span class="hljs-keyword">reverse</span>
-puts var3.<span class="hljs-keyword">reverse</span>
+puts var1.reverse
+puts var2.reverse
+puts var3.reverse
 puts var1
 puts var2
 puts var3
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>rarap
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">rarap
 odayarbus
 ?sever la nóicaro atse raicnunorp sedeuP
 parar
 subrayado
 Puedes pronunciar esta oración al reves?
-</code></pre><p>Como puedes ver, <code>reverse</code> no revierte el orden en el string original; éste
+</code></pre>
+<p>Como puedes ver, <code>reverse</code> no revierte el orden en el string original; éste
 sólo hace una nueva versión de éste en reversa. Esto es porque <code>var1</code> continua
 <code>&#39;parar&#39;</code> aún después de que llamamos  <code>reverse</code> sobre  <code>var1</code>.</p>
 <p>Otro método para texto es <code>length</code>, el cual nos dice el número de caracteres
 (incluyendo caracteres) en el texto:</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
-name = gets.<span class="hljs-keyword">chomp</span>
-puts <span class="hljs-string">'¿Sabes que hay '</span> + name.<span class="hljs-keyword">length</span> + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Cuál es tu nombre completo?
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+name = gets.chomp
+puts <span class="hljs-string">'¿Sabes que hay '</span> + name.length + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Cuál es tu nombre completo?
 Christopher David Pine
-<span class="hljs-preprocessor">#&lt;TypeError: can't convert Fixnum into String&gt;</span>
-</code></pre><p>¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea
+in `+&#39;: no implicit conversion of Fixnum into String (TypeError)
+</code></pre>
+<p>¡¡Uhh!! Algo salió mal, y esto parece que ocurrió después la línea
 <code>name = gets.chomp</code>... ¿Puedes ver el problema? Fijate si puedes darte cuenta.</p>
 <p>El problema es con <code>length</code>: esto te devuelve un número, pero nosotros queremos
 un texto. Esto es fácil, necesitamos solo agregar <code>to_s</code> (y cruzar nuestros dedos):</p>
 <p><em>Código:</em></p>
-<pre><code>puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
-name = gets.<span class="hljs-keyword">chomp</span>
-puts <span class="hljs-string">'¿Sabías que hay '</span> + name.<span class="hljs-keyword">length</span>.to_s + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>Cuál es tu nombre completo?
-Christopher David <span class="hljs-built_in">Pine</span>
-Sabías que hay <span class="hljs-number">22</span> caracteres en tu nombre, Christopher David <span class="hljs-built_in">Pine</span>
-</code></pre><p>No, no conocía esto.  <strong>Nota:</strong> esto es el número de
+<pre><code class="lang-ruby">puts <span class="hljs-string">'Cuál es tu nombre completo?'</span>
+name = gets.chomp
+puts <span class="hljs-string">'¿Sabías que hay '</span> + name.length.to_s + <span class="hljs-string">' caracteres en tu nombre, '</span> + name + <span class="hljs-string">'?'</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">Cuál es tu nombre completo?
+Christopher David Pine
+Sabías que hay 22 caracteres en tu nombre, Christopher David Pine
+</code></pre>
+<p>No, no conocía esto.  <strong>Nota:</strong> esto es el número de
 <em>caracteres</em> en mi nombre, no el número de <em>letras</em>. Supongo
 que podríamos escribir un programa el cual nos pregunte por nuestro primer
 nombre, segundo nombre y apellidos individualmente, y entonces sumar estos tamaños
@@ -374,21 +384,23 @@ letra en el string(&quot;Hola&quot;.swapcase  #=&gt; &quot;hOLA&quot;), y finalm
 es como <code>downcase</code>, excepto que esto cambia solo el primer carácter a
 mayúsculas(si es una letra).</p>
 <p><em>Código:</em></p>
-<pre><code>letters = <span class="hljs-string">'aAbBcCdDeE'</span>
+<pre><code class="lang-ruby">letters = <span class="hljs-string">'aAbBcCdDeE'</span>
 puts letters.upcase
 puts letters.downcase
 puts letters.swapcase
 puts letters.capitalize
 puts <span class="hljs-string">' a'</span>.capitalize
 puts letters
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>AABBCCDDEE
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">AABBCCDDEE
 aabbccddee
 AaBbCcDdEe
 Aabbccddee
- <span class="hljs-operator">a</span>
+ a
 aAbBcCdDeE
-</code></pre><p>Esto es bastante estándar. Como puedes ver desde la linea <code>puts &#39; a&#39;.capitalize</code>,
+</code></pre>
+<p>Esto es bastante estándar. Como puedes ver desde la linea <code>puts &#39; a&#39;.capitalize</code>,
 el método <code>capitalize</code> sólo deja en mayúsculas el primer <em>carácter</em>, no
 la primera <em>letra</em>. También, como hemos visto antes, en todas estas llamadas a
 métodos, <code>letters</code> permanece igual. No quiero decir que se dedica sólo a ésto,
@@ -400,14 +412,15 @@ que decir <code>puts</code> a lo que quieres imprimir, y <code>+</code> a lo que
 tienes que decir a <code>center</code> que ancho tiene que tener el string centrado. Entonces si quiero
 centrar las lineas de un poema, debería hacer algo como esto:</p>
 <p><em>Código:</em></p>
-<pre><code>lineWidth = <span class="hljs-number">50</span>
-puts(                <span class="hljs-attribute">'Old</span> Mother Hubbard'.center(lineWidth))
-puts(               <span class="hljs-attribute">'Sat</span> <span class="hljs-keyword">in</span> her cupboard'.center(lineWidth))
-puts(         <span class="hljs-attribute">'Eating</span> her curds an whey,'.center(lineWidth))
-puts(          <span class="hljs-attribute">'When</span> along came a spider'.center(lineWidth))
-puts(         <span class="hljs-attribute">'Which</span> sat down beside her'.center(lineWidth))
-puts(<span class="hljs-attribute">'And</span> scared her poor shoe dog away.'.center(lineWidth))
-</code></pre><p><em>Resultado:</em></p>
+<pre><code class="lang-ruby">lineWidth = <span class="hljs-number">50</span>
+puts(                <span class="hljs-string">'Old Mother Hubbard'</span>.center(lineWidth))
+puts(               <span class="hljs-string">'Sat in her cupboard'</span>.center(lineWidth))
+puts(         <span class="hljs-string">'Eating her curds an whey,'</span>.center(lineWidth))
+puts(          <span class="hljs-string">'When along came a spider'</span>.center(lineWidth))
+puts(         <span class="hljs-string">'Which sat down beside her'</span>.center(lineWidth))
+puts(<span class="hljs-string">'And scared her poor shoe dog away.'</span>.center(lineWidth))
+</code></pre>
+<p><em>Resultado:</em></p>
 <pre><code>          Old Mother Hubbard
          Sat <span class="hljs-operator">in</span> her cupboard
       Eating her curds <span class="hljs-operator">an</span> whey,
@@ -439,13 +452,14 @@ pero no la herramienta correcta para <em>cualquier</em> trabajo.</p>
 excepto que ellos rellenan los lados derecho e izquierdo respectivamente.
 Vamos a verlos en acción:</p>
 <p><em>Código:</em></p>
-<pre><code>lineWidth = <span class="hljs-number">40</span>
-<span class="hljs-keyword">str</span> = <span class="hljs-string">'--&gt; text &lt;--'</span>
-puts <span class="hljs-keyword">str</span>.ljust  lineWidth
-puts <span class="hljs-keyword">str</span>.center lineWidth
-puts <span class="hljs-keyword">str</span>.rjust  lineWidth
-puts <span class="hljs-keyword">str</span>.ljust(lineWidth/<span class="hljs-number">2</span>) + <span class="hljs-keyword">str</span>.rjust(lineWidth/<span class="hljs-number">2</span>)
-</code></pre><p><em>Resultado:</em></p>
+<pre><code class="lang-ruby">lineWidth = <span class="hljs-number">40</span>
+str = <span class="hljs-string">'--&gt; text &lt;--'</span>
+puts str.ljust  lineWidth
+puts str.center lineWidth
+puts str.rjust  lineWidth
+puts str.ljust(lineWidth/<span class="hljs-number">2</span>) + str.rjust(lineWidth/<span class="hljs-number">2</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
 <pre><code><span class="hljs-literal">-</span><span class="hljs-literal">-</span>&gt; <span class="hljs-comment">text</span> &lt;<span class="hljs-literal">-</span><span class="hljs-literal">-</span>
               <span class="hljs-literal">-</span><span class="hljs-literal">-</span>&gt; <span class="hljs-comment">text</span> &lt;<span class="hljs-literal">-</span><span class="hljs-literal">-</span>
                             <span class="hljs-literal">-</span><span class="hljs-literal">-</span>&gt; <span class="hljs-comment">text</span> &lt;<span class="hljs-literal">-</span><span class="hljs-literal">-</span>
@@ -489,18 +503,20 @@ exponentes, entonces si quieres una raíz cuadrada de 5, deberías escribir
 por un número. Entonces, por ejemplo, si divido 7 por 3, obtengo 2 con un remanente
 de 1. Vamos a ver como es que trabaja en un programa:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-built_in">puts</span> <span class="hljs-number">5</span>**<span class="hljs-number">2</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">5</span>**<span class="hljs-number">0.5</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">7</span>/<span class="hljs-number">3</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">7</span>%<span class="hljs-number">3</span>
-<span class="hljs-built_in">puts</span> <span class="hljs-number">365</span>%<span class="hljs-number">7</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>25
+<pre><code class="lang-ruby">puts <span class="hljs-number">5</span>**<span class="hljs-number">2</span>
+puts <span class="hljs-number">5</span>**<span class="hljs-number">0</span>.<span class="hljs-number">5</span>
+puts <span class="hljs-number">7</span>/<span class="hljs-number">3</span>
+puts <span class="hljs-number">7</span>%<span class="hljs-number">3</span>
+puts <span class="hljs-number">365</span>%<span class="hljs-number">7</span>
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">25
 2.23606797749979
 2
 1
 1
-</code></pre><p>De la última línea, aprendimos que un año (no bisiesto) tienen algún
+</code></pre>
+<p>De la última línea, aprendimos que un año (no bisiesto) tienen algún
 número de semanas, más un día. Entonces si tu cumpleaños fue un Martes
 este año, el próximo año será un Miércoles. Tu también puedes usar
 flotantes con el método módulo (<code>%</code>). Básicamente, funciona de una manera
@@ -508,12 +524,14 @@ lógica... pero voy a mostrar un poco mas como trabajar con esto.</p>
 <p>Hay un último método para mencionar antes de revisar el método <code>random</code>:
  <code>abs</code>. Éste sólo toma el valor absoluto de un número:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-built_in">puts</span>((<span class="hljs-number">5</span>-<span class="hljs-number">2</span>).<span class="hljs-built_in">abs</span>)
-<span class="hljs-built_in">puts</span>((<span class="hljs-number">2</span>-<span class="hljs-number">5</span>).<span class="hljs-built_in">abs</span>)
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>3
+<pre><code class="lang-ruby">puts((<span class="hljs-number">5</span>-<span class="hljs-number">2</span>).abs)
+puts((<span class="hljs-number">2</span>-<span class="hljs-number">5</span>).abs)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3
 3
-</code></pre><h2 id="n-meros-aleatorios">Números aleatorios</h2>
+</code></pre>
+<h2 id="n-meros-aleatorios">Números aleatorios</h2>
 <p>Ruby viene con un lindo generador de números aleatorios. El método para obtener
 un número aleatorio es <code>rand</code>. Si llamas <code>rand</code> , obtendrás un
 número flotante mayor o igual a <code>0.0</code> y menor a <code>1.0</code>. Si
@@ -522,32 +540,34 @@ esto te devolverá un entero mayor o igual a <code>0</code> y menor a <code>5</c
 (entonces son cinco números posibles, de <code>0</code> a <code>4</code>).</p>
 <p>Vamos a ver <code>rand</code>  en acción.</p>
 <p><em>Código:</em></p>
-<pre><code>puts rand
+<pre><code class="lang-ruby">puts rand
 puts rand
 puts rand
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">100</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">100</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">100</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">1</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">1</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">1</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-function">rand(<span class="hljs-number">99999999999999999999999999999999999999999999999999999999999</span>)</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-string">'El pronosticador del tiempo dijo que hay '</span>+<span class="hljs-function">rand(<span class="hljs-number">101</span>)</span>.to_s+<span class="hljs-string">'% chances de que llueva,'</span>)</span>
-<span class="hljs-function">puts(<span class="hljs-string">'pero nunca debes confiar en el.'</span>)</span>
-</code></pre><p><em>Resultado:</em></p>
-<pre><code><span class="hljs-number">0.866769322351658</span>
-<span class="hljs-number">0.155609260113273</span>
-<span class="hljs-number">0.208355946789083</span>
-<span class="hljs-number">61</span>
-<span class="hljs-number">46</span>
-<span class="hljs-number">92</span>
-<span class="hljs-number">0</span>
-<span class="hljs-number">0</span>
-<span class="hljs-number">0</span>
-<span class="hljs-number">22982477508131860231954108773887523861600693989518495699862</span>
-El pronosticador <span class="hljs-keyword">del</span> tiempo dijo que hay <span class="hljs-number">47</span>% chances de que llueva,
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">1</span>))
+puts(rand(<span class="hljs-number">99999999999999999999999999999999999999999999999999999999999</span>))
+puts(<span class="hljs-string">'El pronosticador del tiempo dijo que hay '</span>+rand(<span class="hljs-number">101</span>).to_s+<span class="hljs-string">'% chances de que llueva,'</span>)
+puts(<span class="hljs-string">'pero nunca debes confiar en el.'</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">0.866769322351658
+0.155609260113273
+0.208355946789083
+61
+46
+92
+0
+0
+0
+22982477508131860231954108773887523861600693989518495699862
+El pronosticador del tiempo dijo que hay 47% chances de que llueva,
 pero nunca debes confiar en el.
-</code></pre><p>Fijate que utilicé <code>rand(101)</code> para obtener números entre <code>0</code>
+</code></pre>
+<p>Fijate que utilicé <code>rand(101)</code> para obtener números entre <code>0</code>
 y <code>100</code>, y que el <code>rand(1)</code> siempre devuelve <code>0</code>. No
 entender el rango posible de retorno de valores es el error más grande que veo
 en gente que hace <code>rand</code>; aún programadores profesionales, más aún en
@@ -564,21 +584,22 @@ con éste o enviarlo a un amigo.) Con el fin de hacer esto, tu necesitas configu
 la <em>&quot;generación de éste&quot;</em>, lo que se puede hacer con <code>srand</code>. Como
 lo siguiente:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-keyword">srand</span> <span class="hljs-number">1776</span>
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
+<pre><code class="lang-ruby">srand <span class="hljs-number">1776</span>
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
 puts <span class="hljs-string">''</span>
-<span class="hljs-keyword">srand</span> <span class="hljs-number">1776</span>
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>))
-</code></pre><p> <em>Resultado:</em></p>
-<pre><code>24
+srand <span class="hljs-number">1776</span>
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+puts(rand(<span class="hljs-number">100</span>))
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">24
 35
 36
 58
@@ -589,7 +610,8 @@ puts(<span class="hljs-keyword">rand</span>(<span class="hljs-number">100</span>
 36
 58
 70
-</code></pre><p>Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
+</code></pre>
+<p>Esto hará la misma cosa cada vez que inicies con el mismo número. Si quieres
 obtener diferentes números(como pasaría si nunca utilizaras <code>srand</code>),
 entonces sólo llamas a <code>srand 0</code>. Esto inicializa con un número
 realmente raro, utilizando (además de otras cosas) la hora actual de tu
@@ -598,20 +620,22 @@ computadora, hasta los milisegundos.</p>
 <p>Finalmente, vamos a echar un vistazo al objeto <code>Math</code>. Deberíamos
 ir directamente a este:</p>
 <p><em>Código:</em></p>
-<pre><code><span class="hljs-built_in">puts</span>(Math::PI)
-<span class="hljs-built_in">puts</span>(Math::E)
-<span class="hljs-built_in">puts</span>(Math.<span class="hljs-built_in">cos</span>(Math::PI/<span class="hljs-number">3</span>))
-<span class="hljs-built_in">puts</span>(Math.<span class="hljs-built_in">tan</span>(Math::PI/<span class="hljs-number">4</span>))
-<span class="hljs-built_in">puts</span>(Math.<span class="hljs-built_in">log</span>(Math::E**<span class="hljs-number">2</span>))
-<span class="hljs-built_in">puts</span>((<span class="hljs-number">1</span> + Math.<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">5</span>))/<span class="hljs-number">2</span>)
-</code></pre><p><em>Resultado:</em></p>
-<pre><code>3.14159265358979
+<pre><code class="lang-ruby">puts(<span class="hljs-constant">Math::PI</span>)
+puts(<span class="hljs-constant">Math::E</span>)
+puts(<span class="hljs-constant">Math</span>.cos(<span class="hljs-constant">Math::PI</span>/<span class="hljs-number">3</span>))
+puts(<span class="hljs-constant">Math</span>.tan(<span class="hljs-constant">Math::PI</span>/<span class="hljs-number">4</span>))
+puts(<span class="hljs-constant">Math</span>.log(<span class="hljs-constant">Math::E</span>**<span class="hljs-number">2</span>))
+puts((<span class="hljs-number">1</span> + <span class="hljs-constant">Math</span>.sqrt(<span class="hljs-number">5</span>))/<span class="hljs-number">2</span>)
+</code></pre>
+<p><em>Resultado:</em></p>
+<pre><code class="lang-html">3.14159265358979
 2.71828182845905
 0.5
 1.0
 2.0
 1.61803398874989
-</code></pre><p>La primera cosa de la que te habrás dado cuenta es probablemente de
+</code></pre>
+<p>La primera cosa de la que te habrás dado cuenta es probablemente de
 la notación <code>::</code>. Explicando el <em>alcance del operador</em>
 (que es esto) esta fuera del objetivo de este tutorial.</p>
 <p>Como puedes ver, <code>Math</code> tiene todas las cosas que podrías
